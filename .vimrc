@@ -113,7 +113,7 @@
  set relativenumber
  
  
- " Set fold Method{{{
+ " Set fold Method:{{{
  set foldmethod=marker
  
  " Fold Method types:
@@ -136,7 +136,7 @@
  "               set foldmaker=/*,*/
  " }}}
 
-
+"color section: {{{
 set t_Co=256
 "let g:solarized_termcolors=256
 
@@ -146,5 +146,16 @@ set t_Co=256
 "colorscheme desert
 
 colorscheme molokai
+
+"}}}<<<end of colorsection>>>
+
+"VimCasts:{{{
+"""""""""Show Invisibles""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Shortcut to rapidly toggle `set list`
+ nmap <leader>l :set list!<CR>
+" " Use the same symbols as TextMate for tabstops and EOLs
+ set listchars=tab:▸\ ,eol:¬
+
+ "}}} <<end of VimCasts>>>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""<<<EOF>>>
