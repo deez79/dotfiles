@@ -63,7 +63,6 @@
  
  "=> Vundle Section:{{{
 
-
  set nocompatible              " be iMproved, required
  filetype off                  " required
  
@@ -150,12 +149,61 @@ colorscheme molokai
 "}}}<<<end of color section>>>
 
 "=> VimCasts:{{{
-"""""""""Show Invisibles""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""Show Invisibles{{{""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Shortcut to rapidly toggle `set list`
  nmap <leader>l :set list!<CR>
 " " Use the same symbols as TextMate for tabstops and EOLs
  set listchars=tab:▸\ ,eol:¬
+"}}}<<<end show invisibles>>>
 
- "}}} <<end of VimCasts>>>
+"""""""""Tabs and Spaces{{{""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 4 settings:
+"tabstop: specifies the width of a tab character
+"expandtab: when eneabled causes spaces to be used instead of tab characters
+"softtabstop: when enabled fine tunes the abmount of whitespace to be inserted
+"shiftwidth: determines the amount of whitespace to insert or remove using the
+"	indentation commands in normal mode
+"
+" If you want to alway characters then tabstop == stoftab
+" If you prefer to work with spaces then softtabstop == shiftwidth
+
+"set ts=8 sts=0 sw=8 noexpandtab " default settings
+"set ts=8 sts=0 sw=8 expandtab
+set ts=8 sts=8 sw=8 expandtab "prefered settings for now
+"set ts=8 sts=4 sw=4 expandtab
+"set ts=8 sts=4 sw=4 noexpandtab
+"set ts=4 sts=4 sw=4 noexpandtab
+
+" Set tabstop, softtabstop and shiftwidth to the same value
+command! -nargs=* Stab call Stab()
+function! Stab()
+	let l:tabstop = 1 * input('set tabstop = softtabstop = shiftwidth = ')
+	if l:tabstop > 0
+		let &l:sts = l:tabstop
+		let &l:ts = l:tabstop
+		let &l:sw = l:tabstop
+	endif
+	call SummarizeTabs()
+endfunction
+
+function! SummarizeTabs()
+	try
+		echohl ModeMsg
+		echon 'tabstop='.&l:ts
+		echon ' shiftwidth='.&l:sw
+		echon ' softtabstop='.&l:sts
+		if &l:et
+			echon ' expandtab'
+		else
+			echon 'noexpandtab'
+		endif
+	finally
+		echohl None
+	endtry
+endfunction
+"}}}<<<end tabs and spaces>>>
+
+
+"}}} <<end of VimCasts>>>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""<<<EOF>>>
