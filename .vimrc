@@ -57,15 +57,13 @@
  "}}}<<<end of Basic install>>>
  "
  "
- " 
+ "
  """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
  
  
- """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
- "
- "       Vundle Section:{{{
- "
- """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+ "=> Vundle Section:{{{
+
+
  set nocompatible              " be iMproved, required
  filetype off                  " required
  
@@ -107,13 +105,15 @@
  filetype plugin indent on    " required
  "}}}<<<end of Vundle Section>>>
  
+ "=> General Section:{{{
  
  " activate numbering
  set number
  set relativenumber
  
+ "}}}<<<end of General Section>>>
  
- " Set fold Method:{{{
+ "=> Set Fold Method:{{{
  set foldmethod=marker
  
  " Fold Method types:
@@ -136,7 +136,7 @@
  "               set foldmaker=/*,*/
  " }}}<<<end of fold method>>>
 
-"color section: {{{
+"=> Color Section: {{{
 set t_Co=256
 "let g:solarized_termcolors=256
 
@@ -147,9 +147,9 @@ set t_Co=256
 
 colorscheme molokai
 
-"}}}<<<end of colorsection>>>
+"}}}<<<end of color section>>>
 
-"VimCasts:{{{
+"=> VimCasts:{{{
 """""""""Show Invisibles""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Shortcut to rapidly toggle `set list`
  nmap <leader>l :set list!<CR>
