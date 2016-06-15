@@ -54,7 +54,7 @@
  "                                       " Put your non-Plugin stuff after this line
  "
  "
- "}}}
+ "}}}<<<end of Basic install>>>
  "
  "
  " 
@@ -105,7 +105,7 @@
  " All of your Plugins must be added before the following line
  call vundle#end()            " required
  filetype plugin indent on    " required
- "}}}
+ "}}}<<<end of Vundle Section>>>
  
  
  " activate numbering
@@ -134,7 +134,7 @@
  "       set foldmarker=start, end
  "       i.e
  "               set foldmaker=/*,*/
- " }}}
+ " }}}<<<end of fold method>>>
 
 "color section: {{{
 set t_Co=256
