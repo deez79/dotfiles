@@ -1,6 +1,15 @@
 #!/bin/bash
 
-# install and setup vim {{{:
+################################################################################
+#
+#       startup script attribution:
+#
+#       created by: deez79
+#       date created: 06/28/2016
+#
+################################################################################
+
+# install and setup vim: {{{
 
 # do the install
 sudo apt-get install vim
@@ -19,7 +28,13 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 #}}} <<<End of install and setup vim>>>
 
+# set up bashrc: {{{
 
+# back up default bashrc
+cp ~/.bashrc{,.factory-default-$(date "+%Y-%m-%d")}
+
+
+#}}}} <<< End of set up bashrc>>>
 
 
 
