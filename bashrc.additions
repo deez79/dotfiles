@@ -1,0 +1,17 @@
+#### Custom Section {{{ ########################################################
+#
+#       Maintainer: @deez79
+#       create date: 6/29/2016
+#
+################################################################################
+
+# Set vi as default:
+set -o vi
+
+# Log every bash command ever:
+export PROMPT_COMMAND='if [ "$(id -u)" -ne 0 ]; then echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $(history 1)" >> ~/.logs/bash-history-$(date "+%Y-%m-%d").log; fi'
+
+
+# dvtm dtach setup alias:
+alias wm="dtach -A /tmp/dvtm -r winch dvtm"
+
