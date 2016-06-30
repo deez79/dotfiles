@@ -33,6 +33,12 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 # back up default bashrc
 cp ~/.bashrc{,.factory-default-$(date "+%Y-%m-%d")}
 
+# add custom bashrc sections:
+cat ~/Downloads/dotfiles/bashrc.additions >> ~/.bashrc
+
+# set up log folder for bash history
+mkdir ~/.logs
+
 
 #}}}} <<< End of set up bashrc>>>
 
