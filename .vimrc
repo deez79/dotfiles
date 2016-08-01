@@ -92,6 +92,10 @@
  
  " Minimap like the one in sublimetext
  "Plugin 'severin-lemaignan/vim-minimap'
+
+ " Markdown Highlightingr 
+ Plugin 'godlygeek/tabular'
+ Plugin 'plasticboy/vim-markdown'
  
  " Color
  Plugin 'sjl/badwolf'
@@ -109,6 +113,11 @@
  " activate numbering
  set number
  set relativenumber
+
+ " automatically reload vimrc when it's saved
+ "      taken from: http://www.vimbits.com/bits/128
+ "      seems to bogdown vim.  Probably remove it.
+"autocmd BufWritePost .vimrc so ~/.vimrc
  
  "}}}<<<end of General Section>>>
  
@@ -135,7 +144,7 @@
  "               set foldmaker=/*,*/
  " }}}<<<end of fold method>>>
 
-"=> Color Section: {{{
+"> Color Section: {{{
 set t_Co=256
 "let g:solarized_termcolors=256
 
@@ -143,7 +152,7 @@ set t_Co=256
 "set background=dark
 "colorscheme solarized
 "colorscheme desert
-
+"colorscheme atom
 colorscheme molokai
 
 "}}}<<<end of color section>>>
