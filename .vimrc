@@ -96,6 +96,9 @@
  " Markdown Highlightingr 
  Plugin 'godlygeek/tabular'
  Plugin 'plasticboy/vim-markdown'
+
+ " Auto Pairing for brackets, paren, and quotes
+ Plugin 'jiangmiao/auto-pairs'
  
  " Color
  Plugin 'sjl/badwolf'
