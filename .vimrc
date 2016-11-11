@@ -118,7 +118,7 @@
  set relativenumber
  
  "set up templates for filetypes
-autocmd BufNewFile *. md  0read ~/Skeletons/skeleton.md
+autocmd BufNewFile *.md   0read ~/Skeletons/skeleton.md
 autocmd BufNewFile *.sh   0read ~/Skeletons/skeleton.sh
 autocmd BufNewFile *.c    0read ~/Skeletons/skeleton.c
 autocmd BufNewFile *.h    0read ~/Skeletons/skeleton.h
