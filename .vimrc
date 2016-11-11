@@ -116,8 +116,15 @@
  " activate numbering
  set number
  set relativenumber
+ 
+ "set up templates for filetypes
+autocmd BufNewFile *. md  0read ~/Skeletons/skeleton.md
+autocmd BufNewFile *.sh   0read ~/Skeletons/skeleton.sh
+autocmd BufNewFile *.c    0read ~/Skeletons/skeleton.c
+autocmd BufNewFile *.h    0read ~/Skeletons/skeleton.h
+autocmd BufNewFile *.java 0read ~/Skeletons/skeleton.java
 
- " automatically reload vimrc when it's saved
+" automatically reload vimrc when it's saved
  "      taken from: http://www.vimbits.com/bits/128
  "      seems to bogdown vim.  Probably remove it.
 "autocmd BufWritePost .vimrc so ~/.vimrc

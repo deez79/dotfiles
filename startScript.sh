@@ -19,7 +19,10 @@ mv ~/.vimrc{,.bak-$(date "+%Y-%m-%d")}
 
 #symbolic link from dotfiles to default locations:
 #       need to set up variable for dotfiles location.  By default I put them in ~/Downloads
+# vimrc
 ln -s ~/Downloads/dotfiles/.vimrc ~/.vimrc 
+# vim templates
+ln -s ~/Downloads/dotfiles/Skeletons ~/Skeletons
 
 # Install Vundle for vim:
 #       would like to set up way to check and see if Vundle exists already
