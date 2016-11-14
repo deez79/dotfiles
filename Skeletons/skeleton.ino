@@ -1,8 +1,8 @@
 //**************************************************************************************
 //
-//  TITLE:   <insert title here>
-//  AUTHOR:  @deez79
-//  DATE:    <insert date here>
+//  TITLE:   <insert_title_here>
+//  AUTHOR: <insert_author_here> 
+//  DATE:    <insert_date_here>
 //
 //**************************************************************************************
 
