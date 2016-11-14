@@ -105,7 +105,12 @@
  Plugin 'altercation/vim-colors-solarized'
  Plugin 'tomasr/molokai'
  Plugin 'zaiste/Atom'
- 
+
+ " Utilisnips Pluggin
+ " Track the engine.
+ Plugin 'SirVer/ultisnips'
+ " Snippets are separated from the engine. Add this if you want them:
+ " Plugin 'honza/vim-snippets'
  " All of your Plugins must be added before the following line
  call vundle#end()            " required
  filetype plugin indent on    " required
@@ -132,7 +137,7 @@ autocmd BufNewFile *.ino  0read ~/Skeletons/skeleton.ino
  
  "}}}<<<end of General Section>>>
  
- "=> Set Fold Method:{{{
+"=> Set Fold Method:{{{
  set foldmethod=marker
  
  " Fold Method types:
@@ -223,7 +228,17 @@ function! SummarizeTabs()
 endfunction
 "}}}<<<end tabs and spaces>>>
 
-
+"""""""""Utilisnips:{{{""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Trigger configuration. Do not use <tab> if you use
+" https://github.com/Valloric/YouCompleteMe.
+ let g:UltiSnipsExpandTrigger="<tab>"
+ let g:UltiSnipsJumpForwardTrigger="<c-b>"
+ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+"
+" If you want :UltiSnipsEdit to split your window.
+ let g:UltiSnipsEditSplit="vertical"
+" }}} <<<end of Utilisnips>>>
+ 
 "}}} <<end of VimCasts>>>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""<<<EOF>>>
