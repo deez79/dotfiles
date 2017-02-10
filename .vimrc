@@ -180,7 +180,12 @@ colorscheme molokai
 " Shortcut to rapidly toggle `set list`
  nmap <leader>l :set list!<CR>
 " " Use the same symbols as TextMate for tabstops and EOLs
+" The "if patch" is taken from:
+" http://stackoverflow.com/questions/18321538/vim-error-e474-invalid-argument-listchars-tab-trailhttp://stackoverflow.com/questions/18321538/vim-error-e474-invalid-argument-listchars-tab-trail
+"       to work around the tab and eol characters.
+if has("patch-7.4.710")
  set listchars=tab:▸\ ,eol:¬
+endif
 "}}}<<<end show invisibles>>>
 
 """""""""Tabs and Spaces{{{""""""""""""""""""""""""""""""""""""""""""""""""""""""""
