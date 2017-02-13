@@ -132,6 +132,9 @@ autocmd BufNewFile *.ino  0read ~/Skeletons/skeleton.ino
 "autocmd BufNewFile *.h    0read ~/Skeletons/skeleton.h
 "autocmd BufNewFile *.java 0read ~/Skeletons/skeleton.java
 
+" add highlighting
+set hlsearch
+
 " automatically reload vimrc when it's saved
  "      taken from: http://www.vimbits.com/bits/128
  "      seems to bogdown vim.  Probably remove it.
