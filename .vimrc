@@ -133,7 +133,12 @@ autocmd BufNewFile *.ino  0read ~/Skeletons/skeleton.ino
 "autocmd BufNewFile *.java 0read ~/Skeletons/skeleton.java
 
 " add highlighting
-set hlsearch
+ set hlsearch
+" Press Space to turn off highlighting and clear any message already
+" displayed.
+ nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+" Press F4 to toggle highlighting on/off, and show current value.
+ noremap <F4> :set hlsearch! hlsearch?<CR>
 
 " automatically reload vimrc when it's saved
  "      taken from: http://www.vimbits.com/bits/128
