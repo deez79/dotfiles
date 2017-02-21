@@ -99,7 +99,7 @@
 
  " Auto Pairing for brackets, paren, and quotes
  Plugin 'jiangmiao/auto-pairs'
- 
+
  " Color
  Plugin 'sjl/badwolf'
  Plugin 'altercation/vim-colors-solarized'
@@ -112,6 +112,8 @@
  " Snippets are separated from the engine. Add this if you want them:
  " Plugin 'honza/vim-snippets'
 
+ " Verticle Indent Lines to show nesting:
+ Plugin 'Yggdroot/indentLine'
  
  " All of your Plugins must be added before the following line
  call vundle#end()            " required
