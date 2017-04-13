@@ -84,10 +84,10 @@ echo "##########################################################################
 echo "Seeing if Vundle is installed"
 if [ -d ~/.vim/bundle/Vundle.vim ]
         then 
-                echo "Vundle is installed"
+                echo "Vundle is installed. No need to reinstall it"
         else
                 echo "Installing Vundle"
-#               git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+                git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 fi
 #
 ##      }}} <<<End of install and setup vim>>>
@@ -113,7 +113,7 @@ echo "##########################################################################
 echo "Testing to see if .logs directory exists"
 if [ -d ~/.logs ]
         then
-                echo ".logs directory does exist"
+                echo ".logs directory does exist. No need to recreate it."
         else
                 echo ".logs directory does not exist"
                 mkdir ~/.logs
