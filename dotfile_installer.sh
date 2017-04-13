@@ -75,18 +75,26 @@ fi
 ## vim templates
 #ln -s ~/Downloads/dotfiles/Skeletons ~/Skeletons
 #
+
+
+echo 
+echo "################################################################################"
 ## Install Vundle for vim:
 ##       would like to set up way to check and see if Vundle exists already
-#git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-#
+echo "Seeing if Vundle is installed"
+if [ -f ~/.vim/bundle/Vundle.vim ]
+        then 
+                echo "Vundle is installed"
+        else
+                echo "Installing Vundle"
+#               git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+fi
 #
 ##      }}} <<<End of install and setup vim>>>
 
+echo 
 echo "################################################################################"
-
 ## set up bashrc: {{{
-
-
 echo "Backing up existing bash config file"
 if [ -f ~/.bashrc ]
         then
@@ -96,9 +104,10 @@ if [ -f ~/.bashrc ]
 fi
 ## add custom bashrc sections:
 #cat ~/Downloads/dotfiles/bashrc.additions >> ~/.bashrc
-#
-#
-#
+
+
+
+echo 
 echo "################################################################################"
 ## set up log folder for bash history
 echo "Testing to see if .logs directory exists"
@@ -110,6 +119,7 @@ if [ -d ~/.logs ]
                 mkdir ~/.logs
 fi
 #
+echo 
 echo "################################################################################"
 #
 ##      }}} <<< End of set up bashrc>>>
