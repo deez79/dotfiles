@@ -25,10 +25,10 @@ echo "##########################################################################
 
 # Have user input type of OS being used.  Only Ubuntu or Fedora at this time:
 read -r -p "Are you running: (1) Ubuntu or (2) Fedora? [1/2]    " os
-if [[ $os =~ ^([1]|[uU][bB][uU][nN][tT][uU])$ ]]
+if [[ $os =~ ^([1]|[uU][bB][uU][nN][tT][uU]|[uU])$ ]]
         then 
                 installer="apt-get"
-elif [[ $os =~ ^([2]|[fF][eE][dD][oO][rR][aA])$ ]]
+elif [[ $os =~ ^([2]|[fF][eE][dD][oO][rR][aA]|[fF])$ ]]
         then
                 installer="dnf"
 else 
@@ -42,6 +42,8 @@ fi
         echo $installer
 #        sudo $installer -y -qq update
 
+echo 
+echo "################################################################################"
 
 #       }}} end of preliminary set up
 
@@ -53,18 +55,18 @@ fi
 
 ## do the install
 #sudo $installer install vim
-#
+
 ################################################################################
 #                              Symlink files                                   #
 ################################################################################
-#
-echo "Backing up existing config files"
+
+echo "Backing up existing vim config file"
 if [ -f ~/.vimrc ]
         then
                 echo "Old vimrc exists. Creating backup!"
+                ## backup .vimrc if it exists:
 #               mv ~/.vimrc{,.bak-$(date "+%Y-%m-%d")}
 fi
-## backup .vimrc if it exists:
 
 ##symbolic link from dotfiles to default locations:
 ##       need to set up variable for dotfiles location.  By default I put them in ~/Downloads
@@ -78,20 +80,38 @@ fi
 #git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 #
 #
-##}}} <<<End of install and setup vim>>>
+##      }}} <<<End of install and setup vim>>>
+
+echo "################################################################################"
 
 ## set up bashrc: {{{
 
-## back up default bashrc
-#cp ~/.bashrc{,.factory-default-$(date "+%Y-%m-%d")}
-#
+
+echo "Backing up existing bash config file"
+if [ -f ~/.bashrc ]
+        then
+                echo "Old bashrc exists. Creating backup!"
+                ## back up default bashrc
+#               cp ~/.bashrc{,.factory-default-$(date "+%Y-%m-%d")}
+fi
 ## add custom bashrc sections:
 #cat ~/Downloads/dotfiles/bashrc.additions >> ~/.bashrc
 #
+#
+#
+echo "################################################################################"
 ## set up log folder for bash history
-#mkdir ~/.logs
+echo "Testing to see if .logs directory exists"
+if [ -d ~/.logs ]
+        then
+                echo ".logs directory does exist"
+        else
+                echo ".logs directory does not exist"
+                mkdir ~/.logs
+fi
 #
+echo "################################################################################"
 #
-##}}}} <<< End of set up bashrc>>>
+##      }}} <<< End of set up bashrc>>>
 #
 ##<<<EOF>>>>
