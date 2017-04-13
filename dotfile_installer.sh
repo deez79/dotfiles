@@ -82,7 +82,7 @@ echo "##########################################################################
 ## Install Vundle for vim:
 ##       would like to set up way to check and see if Vundle exists already
 echo "Seeing if Vundle is installed"
-if [ -f ~/.vim/bundle/Vundle.vim ]
+if [ -d ~/.vim/bundle/Vundle.vim ]
         then 
                 echo "Vundle is installed"
         else
