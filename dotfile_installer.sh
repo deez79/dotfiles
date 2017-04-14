@@ -85,13 +85,13 @@ if [ -L ~/Skeletons ]
 fi
 #
 ## Adding link for tmux config file
-if [ -L ~/.tmux.config ]
+if [ -L ~/.tmux.conf ]
         then
                 #echo "tmux config Link exist"
                 echo 
         else
                 #echo "NO tmux config Link"
-                ln -s ~/Downloads/dotfiles/tmux.config ~/.tmux.config
+                ln -s ~/Downloads/dotfiles/tmux.conf ~/.tmux.conf
                 echo
 fi
 
