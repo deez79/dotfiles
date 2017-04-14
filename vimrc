@@ -83,6 +83,8 @@
  
  " Fancy Bar on bottom 
  Plugin 'bling/vim-airline'
+ " add cool themes to airline:
+ Plugin 'vim-airline/vim-airline-themes'
  
  " Commenting
  Plugin 'tomtom/tcomment_vim'
@@ -182,6 +184,9 @@ set t_Co=256
 "colorscheme desert
 "colorscheme atom
 colorscheme molokai
+
+" color theme for airline:
+let g:airline_theme='luna'
 
 "}}}<<<end of color section>>>
 
