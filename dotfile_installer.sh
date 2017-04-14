@@ -16,7 +16,7 @@
 clear
 
 echo "################################################################################"
-echo "############################### Let's do it!####################################"
+echo "###########                     Let's do it!                    ################"
 echo "################################################################################"
 
 ################################################################################
@@ -36,8 +36,7 @@ else
         exit
 fi 
 
-# Run updates based on OS input from user:
-#clear
+## Run updates based on OS input from user:
         echo "Updating Package List"
         echo $installer
 #        sudo $installer -y -qq update
@@ -72,12 +71,30 @@ fi
 ##       need to set up variable for dotfiles location.  By default I put them in ~/Downloads
 ## vimrc
 #ln -s ~/Downloads/dotfiles/vimrc ~/.vimrc 
-## vim templates
-#ln -s ~/Downloads/dotfiles/Skeletons ~/Skeletons
+
+## Adding link for Skeleton files
+if [ -L ~/Skeletons ]
+        then
+                #echo "Skeleton Link exist"
+                echo
+        else
+                #echo "NO Skeleton Link"
+                ## vim templates
+                ln -s ~/Downloads/dotfiles/Skeletons ~/Skeletons
+                echo
+fi
 #
+## Adding link for tmux config file
+if [ -L ~/.tmux.config ]
+        then
+                #echo "tmux config Link exist"
+                echo 
+        else
+                #echo "NO tmux config Link"
+                ln -s ~/Downloads/dotfiles/tmux.config ~/.tmux.config
+                echo
+fi
 
-
-echo 
 echo "################################################################################"
 ## Install Vundle for vim:
 ##       would like to set up way to check and see if Vundle exists already
@@ -94,6 +111,7 @@ fi
 
 echo 
 echo "################################################################################"
+
 ## set up bashrc: {{{
 echo "Backing up existing bash config file"
 if [ -f ~/.bashrc ]
