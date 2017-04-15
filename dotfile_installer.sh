@@ -59,6 +59,20 @@ echo "##########################################################################
 #                              Symlink files                                   #
 ################################################################################
 
+######
+# Testing for source directory
+# http://stackoverflow.com/questions/242538/unix-shell-script-find-out-which-directory-the-script-file-resides
+echo "==========="
+SCRIPT=$(readlink -f "$0")
+REPOPATH=$(dirname "$SCRIPT")
+echo "Looks like you cloned the repo here:"
+echo $REPOPATH
+echo "==========="
+#
+######
+echo 
+echo "################################################################################"
+
 echo "Backing up existing vim config file"
 if [ -f ~/.vimrc ]
         then
@@ -68,9 +82,9 @@ if [ -f ~/.vimrc ]
 fi
 
 ##symbolic link from dotfiles to default locations:
-##       need to set up variable for dotfiles location.  By default I put them in ~/Downloads
+
 ## vimrc
-#ln -s ~/Downloads/dotfiles/vimrc ~/.vimrc 
+#ln -s ~$REPOPATH/vimrc ~/.vimrc 
 
 ## Adding link for Skeleton files
 if [ -L ~/Skeletons ]
@@ -80,7 +94,7 @@ if [ -L ~/Skeletons ]
         else
                 #echo "NO Skeleton Link"
                 ## vim templates
-                ln -s ~/Downloads/dotfiles/Skeletons ~/Skeletons
+                ln -s $REPOPATH/Skeletons ~/Skeletons
                 echo
 fi
 #
@@ -91,7 +105,7 @@ if [ -L ~/.tmux.conf ]
                 echo 
         else
                 #echo "NO tmux config Link"
-                ln -s ~/Downloads/dotfiles/tmux.conf ~/.tmux.conf
+                ln -s $REPOPATH/tmux.conf ~/.tmux.conf
                 echo
 fi
 
@@ -121,9 +135,7 @@ if [ -f ~/.bashrc ]
 #               cp ~/.bashrc{,.factory-default-$(date "+%Y-%m-%d")}
 fi
 ## add custom bashrc sections:
-#cat ~/Downloads/dotfiles/bashrc.additions >> ~/.bashrc
-
-
+#cat $REPOPATH/bashrc.additions >> ~/.bashrc
 
 echo 
 echo "################################################################################"
