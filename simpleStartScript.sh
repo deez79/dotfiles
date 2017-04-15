@@ -12,6 +12,7 @@
 # install and setup vim: {{{
 
 # do the install
+sudo apt-get update
 sudo apt-get install vim
 
 # backup .vimrc if it exists:
