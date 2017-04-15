@@ -132,6 +132,7 @@
 autocmd BufNewFile *.md   0read ~/Skeletons/skeleton.md
 autocmd BufNewFile *.sh   0read ~/Skeletons/skeleton.sh
 autocmd BufNewFile *.ino  0read ~/Skeletons/skeleton.ino
+autocmd BufNewFile *.py   0read ~/Skeletons/skeleton.py
 "autocmd BufNewFile *.c    0read ~/Skeletons/skeleton.c
 "autocmd BufNewFile *.h    0read ~/Skeletons/skeleton.h
 "autocmd BufNewFile *.java 0read ~/Skeletons/skeleton.java
