@@ -107,6 +107,7 @@
  Plugin 'altercation/vim-colors-solarized'
  Plugin 'tomasr/molokai'
  Plugin 'zaiste/Atom'
+ Plugin 'chriskempson/base16-vim'
 
  " Utilisnips Pluggin
  " Track the engine.
@@ -177,7 +178,8 @@ autocmd BufNewFile *.py   0read ~/Skeletons/skeleton.py
 
 "> Color Section: {{{
 set t_Co=256
-"let g:solarized_termcolors=256
+let g:solarized_termcolors=256
+"let base16colorspace=256  " Access colors present in 256 colorspace
 
 " Colors set to solarized (use if accessing from c9)
 "set background=dark
