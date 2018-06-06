@@ -47,13 +47,19 @@ echo "##########################################################################
 #       }}} end of preliminary set up
 
 ################################################################################
-#                              install vim                                     #
+#                              install applications {{{                        #
 ################################################################################
 
-## install and setup vim: {{{
-
-## do the install
+## install and setup vim: 
 #sudo $installer install vim
+
+## install and setup ranger: 
+#sudo $installer install ranger
+
+## install and setup rxvt: 
+#sudo $installer install rxtv
+
+#       }}} end of application installs
 
 ################################################################################
 #                              Symlink files                                   #
@@ -119,6 +125,7 @@ if [ -d ~/.vim/bundle/Vundle.vim ]
         else
                 echo "Installing Vundle"
                 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+                vim +PluginInstall +qall
 fi
 #
 ##      }}} <<<End of install and setup vim>>>
