@@ -117,6 +117,9 @@
 
  " Verticle Indent Lines to show nesting:
  Plugin 'Yggdroot/indentLine'
+
+ " Live Preview of PDF
+ Plugin 'xuhdev/vim-latex-live-preview'
  
  " All of your Plugins must be added before the following line
  call vundle#end()            " required
@@ -266,5 +269,12 @@ endfunction
 " }}} <<<end of Utilisnips>>>
  
 "}}} <<end of VimCasts>>>
+
+" => Options {{{
+
+" set viewer for pdf preview:
+ "let g:livepreview_previewer = 'Document_Viewer'
+
+ "}}} <<<end of Options>>>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""<<<EOF>>>
