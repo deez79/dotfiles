@@ -6,52 +6,51 @@
  "       Date created: 05/19/2016
  "
  "       Basic installs: "{{{
- "               1.      install bundle:
- "                               $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim 
- "                               
- "               2.      set up bundle in .vimrc 
- "                                       set nocompatible              " be iMproved, required
- "                                       filetype off                  " required
+ "               1. install bundle:
+ "                      $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim 
+ "               2. set up bundle in .vimrc 
+ "                      set nocompatible              " be iMproved, required
+ "                      filetype off                  " required
  "
- "                                       " set the runtime path to include Vundle and initialize
- "                                       set rtp+=~/.vim/bundle/Vundle.vim
- "                                       call vundle#begin()
- "                                       " alternatively, pass a path where Vundle should install plugins
- "                                       "call vundle#begin('~/some/path/here')
+ "                     " set the runtime path to include Vundle and initialize
+ "                     set rtp+=~/.vim/bundle/Vundle.vim
+ "                     call vundle#begin()
+ "                     " alternatively, pass a path where Vundle should install plugins
+ "                     "call vundle#begin('~/some/path/here')
  "
- "                                       " let Vundle manage Vundle, required
- "                                       Plugin 'VundleVim/Vundle.vim'
- "                                       " The following are examples of different formats supported.
- "                                       " Keep Plugin commands between vundle#begin/end.
- "                                       " plugin on GitHub repo
- "                                       Plugin 'tpope/vim-fugitive'
- "                                       " plugin from http://vim-scripts.org/vim/scripts.html
- "                                       Plugin 'L9'
- "                                       " Git plugin not hosted on GitHub
- "                                       Plugin 'git://git.wincent.com/command-t.git'
- "                                       " git repos on your local machine (i.e. when working on your own plugin)
- "                                       Plugin 'file:///home/gmarik/path/to/plugin'
- "                                       " The sparkup vim script is in a subdirectory of this repo called vim.
- "                                       " Pass the path to set the runtimepath properly.
- "                                       Plugin 'rstacruz/sparkup', {'rtp':'vim/'}
- "                                       " Install L9 and avoid a Naming conflict if you've already installed a
- "                                       " different version somewhere else.
- "                                       Plugin 'ascenator/L9', {'name':'newL9'}
+ "                     " let Vundle manage Vundle, required
+ "                     Plugin 'VundleVim/Vundle.vim'
+ "                     " The following are examples of different formats supported.
+ "                     " Keep Plugin commands between vundle#begin/end.
+ "                     " plugin on GitHub repo
+ "                     Plugin 'tpope/vim-fugitive'
+ "                     " plugin from http://vim-scripts.org/vim/scripts.html
+ "                     Plugin 'L9'
+ "                     " Git plugin not hosted on GitHub
+ "                     Plugin 'git://git.wincent.com/command-t.git'
+ "                     " git repos on your local machine (i.e. when working on your own plugin)
+ "                     Plugin 'file:///home/gmarik/path/to/plugin'
+ "                     " The sparkup vim script is in a subdirectory of this repo called vim.
+ "                     " Pass the path to set the runtimepath properly.
+ "                     Plugin 'rstacruz/sparkup', {'rtp':'vim/'}
+ "                     " Install L9 and avoid a Naming conflict if you've already installed a
+ "                     " different version somewhere else.
+ "                     Plugin 'ascenator/L9', {'name':'newL9'}
  "
- "                                       " All of your Plugins must be added before the following line
- "                                       call vundle#end()            "required
- "                                       filetype plugin indent on    "required
- "                                       " To ignore plugin indent changes, instead use:
- "                                       "filetype plugin on
- "                                       "
- "                                       " Brief help
- "                                       " :PluginList       - lists configured plugins
- "                                       " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
- "                                       " :PluginSearch foo - searches for foo; append `!` to refresh local cache
- "                                       " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
- "                                       "
- "                                       " see :h vundle for more details or wiki for FAQ
- "                                       " Put your non-Plugin stuff after this line
+ "                     " All of your Plugins must be added before the following line
+ "                     call vundle#end()            "required
+ "                     filetype plugin indent on    "required
+ "                     " To ignore plugin indent changes, instead use:
+ "                     "filetype plugin on
+ "                     "
+ "                     " Brief help
+ "                     " :PluginList       - lists configured plugins
+ "                     " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+ "                     " :PluginSearch foo - searches for foo; append `!` to refresh local cache
+ "                     " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+ "                     "
+ "                     " see :h vundle for more details or wiki for FAQ
+ "                     " Put your non-Plugin stuff after this line
  "
  "
  "}}}<<<end of Basic install>>>
@@ -108,6 +107,8 @@
  Plugin 'tomasr/molokai'
  Plugin 'zaiste/Atom'
  Plugin 'chriskempson/base16-vim'
+ Plugin 'abra/vim-obsidian'
+
 
  " Utilisnips Pluggin
  " Track the engine.
@@ -150,6 +151,10 @@ autocmd BufNewFile *.py   0read ~/Skeletons/skeleton.py
  "      taken from: http://www.vimbits.com/bits/128
  "      seems to bogdown vim.  Probably remove it.
 "autocmd BufWritePost .vimrc so ~/.vimrc
+
+" Make 81st column stand out:
+highlight ColorColumn ctermbg=magenta
+call matchadd('ColorColumn', '\%81v', 100)
  
  "}}}<<<end of General Section>>>
  
@@ -179,7 +184,7 @@ autocmd BufNewFile *.py   0read ~/Skeletons/skeleton.py
 "> Color Section: {{{
 set t_Co=256
 let g:solarized_termcolors=256
-"let base16colorspace=256  " Access colors present in 256 colorspace
+let base16colorspace=256  " Access colors present in 256 colorspace
 
 " Colors set to solarized (use if accessing from c9)
 "set background=dark
