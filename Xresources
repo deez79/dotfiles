@@ -11,7 +11,6 @@
 URxvt*buffered: true
 URxvt*cursorBlink: true
 URxvt*underlineColor: yellow
-URxvt*font:  xft:inconsolata:size=10:antialias=true
 URxvt*depth: 32
 URxvt*borderless: 1
 URxvt*scrollBar: false
@@ -21,6 +20,15 @@ URxvt*saveLines: 5000
 URxvt*termName: rxvt-unicode
 URxvt.urlLauncher: firefox
 URxvt.matcher.button: 1
+
+!! Fonts
+! https://github.com/ryanoasis/nerd-fonts
+!
+!URxvt*font:     xft: UbuntuMono Nerd Font:size=13, 
+!                xft:inconsolata:size=10:antialias=true,
+!                xft: Monospace:style=Medium:antialias=false
+
+URxvt*font:     xft:inconsolata:size=10:antialias=true
 
 !! Extentions
 URxvt.perl-ext-common: default,matcher
