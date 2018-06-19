@@ -64,6 +64,10 @@ echo "##########################################################################
 #sudo chmod a+rx /usr/local/bin/youtube-dl
 #sudo mv /usr/local/bin/youtube-dl /usr/bin/youtube-dl
 
+# Install ffmpeg:
+#sudo $installer install ffmpeg
+
+
 
 #       }}} end of application installs
 
