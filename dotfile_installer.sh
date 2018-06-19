@@ -59,6 +59,12 @@ echo "##########################################################################
 ## install and setup rxvt: 
 #sudo $installer install rxtv
 
+## Install Youtube-Dl
+#sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl 
+#sudo chmod a+rx /usr/local/bin/youtube-dl
+#sudo mv /usr/local/bin/youtube-dl /usr/bin/youtube-dl
+
+
 #       }}} end of application installs
 
 ################################################################################
