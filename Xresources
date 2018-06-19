@@ -2,9 +2,10 @@
 
 !!+--------------------------------------------------------+
 !!
-!! Author: lingzan
-!! URL: https://gist.github.com/liangzan/1643690
-!!      to load:        $ xrbd ~/.Xresources
+!! .Xresources file 
+!! Created by: deez79
+!! based on: https://gist.github.com/liangzan/1643690
+!! to load:        $ xrbd -I$HOME ~/.Xresources
 !!+--------------------------------------------------------+
 
 URxvt*buffered: true
@@ -18,12 +19,13 @@ URxvt*loginShell: true
 Urxvt*secondaryScroll:  true    # Enable Shift-PageUp/Down in screen
 URxvt*saveLines: 5000
 URxvt*termName: rxvt-unicode
-URxvt.perl-ext-common: default,matcher
 URxvt.urlLauncher: firefox
 URxvt.matcher.button: 1
 
+!! Extentions
+URxvt.perl-ext-common: default,matcher
 
-
+!! Color Schemes:
 !#include ".rxvt.colors/xcolor.base16"
 #include ".rxvt.colors/xcolor.solarized"
 
