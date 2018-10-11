@@ -108,7 +108,7 @@
  Plugin 'zaiste/Atom'
  Plugin 'chriskempson/base16-vim'
  Plugin 'abra/vim-obsidian'
-
+ Plugin 'michalbachowski/vim-wombat256mod'
 
  " Utilisnips Pluggin
  " Track the engine.
