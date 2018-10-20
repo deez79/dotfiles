@@ -1,0 +1,25 @@
+################################################################################
+#
+#       Maintainer: @deez79
+#       create date: 10/20/2018
+#
+################################################################################
+
+# Customize Prompt:
+green=$(tput setaf 10);
+white=$(tput setaf 15);
+blue=$(tput setaf 67);
+reset=$(tput sgr0);
+bold=$(tput bold);
+
+
+PS1="\[${bold}\]\n"                     # start prompt on new line
+PS1+="\[${green}\]\u@\h";               # green user@hostname
+PS1+="\[${white}\]:";                   # white colon
+PS1+="\[${blue}\]\w ";                  # blue working directory
+PS1+="\n"                               # new line
+PS1+="\[${white}\]$ \[${reset}\]";      # reset prompt
+export PS1;
+
+################################################################################
+
