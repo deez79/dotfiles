@@ -121,6 +121,12 @@
 
  " Live Preview of PDF
  Plugin 'xuhdev/vim-latex-live-preview'
+
+ " post install (yarn install | npm install)
+ Plugin 'prettier/vim-prettier'
+
+ " syntax highlighting for i3-gaps 
+ Plugin 'PotatoesMaster/i3-vim-syntax'
  
  " All of your Plugins must be added before the following line
  call vundle#end()            " required
