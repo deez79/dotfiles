@@ -233,7 +233,8 @@ endif
 
 "set ts=8 sts=0 sw=8 noexpandtab " default settings
 "set ts=8 sts=0 sw=8 expandtab
-set ts=8 sts=8 sw=8 expandtab "prefered settings for now
+"set ts=8 sts=8 sw=8 expandtab "prefered settings for now
+set ts=4 sts=4 sw=4 expandtab "Default.  Used for Python Code!
 "set ts=8 sts=4 sw=4 expandtab
 "set ts=8 sts=4 sw=4 noexpandtab
 "set ts=4 sts=4 sw=4 noexpandtab
