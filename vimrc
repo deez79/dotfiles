@@ -109,6 +109,7 @@
  Plugin 'chriskempson/base16-vim'
  Plugin 'abra/vim-obsidian'
  Plugin 'michalbachowski/vim-wombat256mod'
+ Plugin 'patstockwell/vim-monokai-tasty'
 
  " Utilisnips Pluggin
  " Track the engine.
