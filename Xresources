@@ -35,5 +35,8 @@ URxvt.perl-ext-common: default,matcher
 
 !! Color Schemes:
 !#include ".rxvt.colors/xcolor.base16"
-#include ".rxvt.colors/xcolor.solarized"
+!#include ".config/Xresources.d/xcolor.solarized"
 
+!! Transparency:
+urxvt*depth:    32
+urxvt*background: [80]#000000
