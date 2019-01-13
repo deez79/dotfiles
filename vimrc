@@ -200,8 +200,8 @@ let base16colorspace=256  " Access colors present in 256 colorspace
 "set background=dark
 "colorscheme solarized
 "colorscheme desert
-"colorscheme atom
-colorscheme molokai
+colorscheme atom
+"colorscheme molokai
 
 " color theme for airline:
 let g:airline_theme='luna'
