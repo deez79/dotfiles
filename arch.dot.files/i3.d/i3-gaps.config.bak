@@ -67,7 +67,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+z split h
+#bindsym $mod+h split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -138,10 +138,10 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # resize window (you can also use the mouse for that)
 
-bindsym $mod+Shift+y resize shrink width 10 px or 10 ppt
-bindsym $mod+Shift+u resize grow height 10 px or 10 ppt
-bindsym $mod+Shift+i resize shrink height 10 px or 10 ppt
-bindsym $mod+Shift+o resize grow width 10 px or 10 ppt
+bindsym $mod+Shift+y    exec --no-startup-id i3resize left
+bindsym $mod+Shift+i resize grow height 10 px or 10 ppt
+bindsym $mod+Shift+o resize shrink height 10 px or 10 ppt
+bindsym $mod+Shift+p resize grow width 10 px or 10 ppt
 
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -171,12 +171,10 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-#bar {
-#	position top
-#   status_command i3status
-#}
-##use Polybar instead of i3status:
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+bar {
+	position top
+        status_command i3status
+}
 
 # Set Up Lockscreen
 bindsym $mod+x exec i3lock
@@ -198,12 +196,12 @@ mode "$mode_launcher" {
 default_border none
 default_floating_border none
 hide_edge_borders both
-for_window [class=".*"] border pixel 1
+#for_window [class=".*"] border pixel 0
 focus_wrapping no
 
 # Gaps:
-gaps inner 10
-gaps outer 15
+#gaps inner 10
+#gaps outer 15
 
 # Add Background:
 ## Use Pywal to select background and match theme too it.
@@ -211,9 +209,9 @@ exec_always wal -i ~/Pictures/wallpapers/
 ## Use feh to select one background.
 #exec_always feh --bg-fill ~/Pictures/Wallpapers/Zhk2rX4.jpg
 ## Use compton for transparency
-#exec_always compton 
+exec_always compton 
 ## force compton to load config file.
-exec_always compton --config ~/.config/compton.config -CG
+#exec_always compton --config ~/.config/compton.config -CG
 
 ###-------------------Basic Variable Names-------------------------###
 #set $term --no-startup-id $TERMINAL
