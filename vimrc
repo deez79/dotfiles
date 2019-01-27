@@ -108,7 +108,8 @@
  Plugin 'zaiste/Atom'
  Plugin 'chriskempson/base16-vim'
  Plugin 'abra/vim-obsidian'
-
+ Plugin 'michalbachowski/vim-wombat256mod'
+ Plugin 'patstockwell/vim-monokai-tasty'
 
  " Utilisnips Pluggin
  " Track the engine.
@@ -121,6 +122,12 @@
 
  " Live Preview of PDF
  Plugin 'xuhdev/vim-latex-live-preview'
+
+ " post install (yarn install | npm install)
+ Plugin 'prettier/vim-prettier'
+
+ " syntax highlighting for i3-gaps 
+ Plugin 'PotatoesMaster/i3-vim-syntax'
  
  " All of your Plugins must be added before the following line
  call vundle#end()            " required
@@ -193,8 +200,8 @@ let base16colorspace=256  " Access colors present in 256 colorspace
 "set background=dark
 "colorscheme solarized
 "colorscheme desert
-"colorscheme atom
-colorscheme molokai
+colorscheme atom
+"colorscheme molokai
 
 " color theme for airline:
 let g:airline_theme='luna'
@@ -227,7 +234,8 @@ endif
 
 "set ts=8 sts=0 sw=8 noexpandtab " default settings
 "set ts=8 sts=0 sw=8 expandtab
-set ts=8 sts=8 sw=8 expandtab "prefered settings for now
+"set ts=8 sts=8 sw=8 expandtab "prefered settings for now
+set ts=4 sts=4 sw=4 expandtab "Default.  Used for Python Code!
 "set ts=8 sts=4 sw=4 expandtab
 "set ts=8 sts=4 sw=4 noexpandtab
 "set ts=4 sts=4 sw=4 noexpandtab

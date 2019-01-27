@@ -1,3 +1,5 @@
+@format
+
 # dotfiles
 my dotfiles
 

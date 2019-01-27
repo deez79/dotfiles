@@ -37,9 +37,14 @@ else
 fi 
 
 ## Run updates based on OS input from user:
-        echo "Updating Package List"
         echo $installer
-#        sudo $installer -y -qq update
+# read -r -p "Run Update? (y/N)" update
+# if [ $update = "y" ]
+#         then 
+#                 echo "Updating Package List"
+#                 sudo $installer -y -qq update
+# fi
+
 
 echo 
 echo "################################################################################"
@@ -51,7 +56,7 @@ echo "##########################################################################
 ################################################################################
 
 ## install and setup vim: 
-#sudo $installer install vim
+sudo $installer install vim
 
 ## install and setup ranger: 
 #sudo $installer install ranger
@@ -94,35 +99,35 @@ if [ -f ~/.vimrc ]
         then
                 echo "Old vimrc exists. Creating backup!"
                 ## backup .vimrc if it exists:
-#               mv ~/.vimrc{,.bak-$(date "+%Y-%m-%d")}
+                mv ~/.vimrc{,.bak-$(date "+%Y-%m-%d")}
 fi
 
 ##symbolic link from dotfiles to default locations:
 
 ## vimrc
-#ln -s ~$REPOPATH/vimrc ~/.vimrc 
+ln -s $REPOPATH/vimrc ~/.vimrc 
 
 ## Adding link for Skeleton files
 if [ -L ~/Skeletons ]
         then
-                #echo "Skeleton Link exist"
-                echo
+                echo "Skeleton Link exist"
+#                echo
         else
-                #echo "NO Skeleton Link"
+                echo "Creating Skeleton Link"
                 ## vim templates
                 ln -s $REPOPATH/Skeletons ~/Skeletons
-                echo
+#                echo
 fi
 #
 ## Adding link for tmux config file
 if [ -L ~/.tmux.conf ]
         then
-                #echo "tmux config Link exist"
-                echo 
+                echo "tmux config Link exist"
+#                echo 
         else
-                #echo "NO tmux config Link"
+                echo "Creating tmux config Link"
                 ln -s $REPOPATH/tmux.conf ~/.tmux.conf
-                echo
+#                echo
 fi
 
 echo "################################################################################"
@@ -149,10 +154,10 @@ if [ -f ~/.bashrc ]
         then
                 echo "Old bashrc exists. Creating backup!"
                 ## back up default bashrc
-#               cp ~/.bashrc{,.factory-default-$(date "+%Y-%m-%d")}
+                cp ~/.bashrc{,.factory-default-$(date "+%Y-%m-%d")}
 fi
 ## add custom bashrc sections:
-#cat $REPOPATH/bashrc.additions >> ~/.bashrc
+cat $REPOPATH/bashrc.additions >> ~/.bashrc
 
 echo 
 echo "################################################################################"

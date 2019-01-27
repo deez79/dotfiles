@@ -24,24 +24,17 @@ URxvt.matcher.button: 1
 !! Fonts
 ! https://github.com/ryanoasis/nerd-fonts
 !
-!URxvt*font:     xft: UbuntuMono Nerd Font:size=13, 
-!                xft:inconsolata:size=10:antialias=true,
-!                xft: Monospace:style=Medium:antialias=false
+URxvt*font:     xft: Font Awesome:size=10,\
+                xft: Ubuntu Mono Nerd Font:size=12,\
+                xft: inconsolata:size=12:antialias=true,\
+                xft: Monospace:style=Medium:antialias=false
 
-URxvt*font:     xft:inconsolata:size=10:antialias=true
+!URxvt*font:     xft:inconsolata:size=10:antialias=true
 
 !! Extentions
 URxvt.perl-ext-common: default,matcher
 
 !! Color Schemes:
-<<<<<<< Updated upstream
-!#include ".rxvt.colors/xcolor.base16"
-!#include ".config/Xresources.d/xcolor.solarized"
-
-!! Transparency:
-urxvt*depth:    32
-urxvt*background: [80]#000000
-=======
 !#include ".config/Xresources.d/xcolor.solarized"
 #include ".config/Xresources.d/xcolor.base16"
 
@@ -49,4 +42,3 @@ urxvt*background: [80]#000000
 !! Transparency:
 URxvt.depth:    32
 URxvt.background:   [80]#000000
->>>>>>> Stashed changes

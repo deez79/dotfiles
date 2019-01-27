@@ -1,0 +1,15 @@
+#
+# ~/.bash_profile
+#
+#echo "from bash_profile"
+
+# Infinite History:
+HISTSIZE= HISTFILESIZE= 
+
+# Standard:
+[[ -f ~/.bashrc ]] && . ~/.bashrc
+
+# Set terminal navigation to vim
+set -o vi
+
+export TERMINAL="urxvt"

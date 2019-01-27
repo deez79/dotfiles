@@ -1,0 +1,21 @@
+# Customize Prompt:
+## Color Section:
+green=$(tput setaf 10);
+white=$(tput setaf 15);
+blue=$(tput setaf 67);
+reset=$(tput sgr0);
+bold=$(tput bold);
+
+## Prompt Section:
+PS1="\[${bold}\]"                       # start prompt. Make it all bold
+PS1+="\[${white}\][";                   # white open bracket
+PS1+="\[${green}\]\u@\h";               # green user@hostname
+PS1+="\[${white}\]:";                   # white colon
+PS1+="\[${blue}\]\w";                   # blue working directory
+PS1+="\[${white}\]]";                   # white close bracket
+PS1+="\[${white}\]> ";                  # white carrot
+PS1+="\n";                              # new line
+PS1+="\[${white}\]$ \[${reset}\]";      # reset prompt
+export PS1;
+
+
