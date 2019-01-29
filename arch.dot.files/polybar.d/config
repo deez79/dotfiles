@@ -106,7 +106,7 @@ font-4 = "Font Awesome 5 Brands:pixelsize=8;1"
 modules-left = i3 xwindow
 modules-center = 
 ;modules-right = networkspeedup networkspeeddown memory2 cpu2 pavolume arch-aur-updates date
-modules-right = arrowOdd filesystem arrowEven networkspeedup networkspeeddown arrowOdd memory2 arrowEven cpu2  arrowOdd arch-aur-updates arrowEven date
+modules-right = !pavolume arrowOdd filesystem arrowEven networkspeedup networkspeeddown arrowOdd memory2 arrowEven cpu2  arrowOdd arch-aur-updates arrowEven date
 
 separator = 
 
