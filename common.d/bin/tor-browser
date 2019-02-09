@@ -1,0 +1,5 @@
+#!/bin/sh
+#cd /home/deez79/Downloads/tor-browser_en-US/
+cd $HOME/Downloads/tor-browser_en-US/
+./start-tor-browser.desktop
+
