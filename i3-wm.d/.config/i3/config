@@ -222,7 +222,7 @@ exec_always compton --config ~/.config/compton/compton.config -CG
 ##--- Applets ---##
 #
 exec_always blueman-applet
-exec_always np-applet
+exec_always nm-applet
 
 ##--- Audio ---##
 #
@@ -255,4 +255,6 @@ bindsym $mod+Shift+w    exec i3lock -d -c 000000
 #
 #bindsym $mod+p          exec $term -e ranger
 #bindsym $mod+q          exec $term -e sh -c "pactl set-sink-mute 0 false ; pactl set-sink-volume 0 +5%"
+#bindsym $mod+Shift+m    exec $term -e sh -c "~/Download/pia-linux-1.0.1-02349.run"
+#exec_always sh ~/Download/pia-linux-1.0.1-02349.run
 

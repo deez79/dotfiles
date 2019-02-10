@@ -622,7 +622,7 @@ format-mounted-background = ${colors.primary}
 ;   %free%
 ;   %used%
 ; Default: %mountpoint% %percentage_free%%
-label-mounted = %mountpoint% %percentage_free%% 
+label-mounted = %mountpoint% %percentage_used%% 
 ;label-mounted = %mountpoint% : %used% used of %total%
 
 ; Available tokens:
