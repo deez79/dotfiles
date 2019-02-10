@@ -129,6 +129,9 @@
  " syntax highlighting for i3-gaps 
  Plugin 'PotatoesMaster/i3-vim-syntax'
  
+ " python IDE
+Plugin 'python-mode/python-mode' 
+
  " All of your Plugins must be added before the following line
  call vundle#end()            " required
  filetype plugin indent on    " required
