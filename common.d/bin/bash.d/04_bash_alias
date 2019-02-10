@@ -1,2 +1,8 @@
-# aliases:
+###----------------- Aliases ------------------###
+
+###--- General aliases ---###
 alias ls='ls --color=auto'
+
+###---Docker alias---###
+alias docker='sudo /usr/bin/docker'
+

@@ -3,6 +3,7 @@
 #
 #echo "from bash_profile"
 
+###------------ General ----------------------###
 # Infinite History:
 HISTSIZE= HISTFILESIZE= 
 
@@ -13,3 +14,4 @@ HISTSIZE= HISTFILESIZE=
 set -o vi
 
 export TERMINAL="urxvt"
+

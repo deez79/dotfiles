@@ -1,3 +1,4 @@
+###------------------- Prompt -----------------###
 # Customize Prompt:
 ## Color Section:
 green=$(tput setaf 10);
@@ -17,5 +18,4 @@ PS1+="\[${white}\]> ";                  # white carrot
 PS1+="\n";                              # new line
 PS1+="\[${white}\]$ \[${reset}\]";      # reset prompt
 export PS1;
-
 
