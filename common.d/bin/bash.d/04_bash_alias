@@ -5,4 +5,5 @@ alias ls='ls --color=auto'
 
 ###---Docker alias---###
 alias docker='sudo /usr/bin/docker'
+alias docker-compose='sudo /usr/bin/docker-compose'
 
