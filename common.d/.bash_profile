@@ -3,6 +3,7 @@
 #
 #echo "from bash_profile"
 
+###------------ General ----------------------###
 # Infinite History:
 HISTSIZE= HISTFILESIZE= 
 
@@ -13,9 +14,13 @@ HISTSIZE= HISTFILESIZE=
 set -o vi
 
 export TERMINAL="urxvt"
+
+###--------------------- Path -----------------###
 # Path
 PATH=$PATH:~/bin 
 export PATH
+
+###------------------- Prompt -----------------###
 # Customize Prompt:
 ## Color Section:
 green=$(tput setaf 10);
@@ -36,20 +41,27 @@ PS1+="\n";                              # new line
 PS1+="\[${white}\]$ \[${reset}\]";      # reset prompt
 export PS1;
 
+###----------------- Aliases ------------------###
 
-# aliases:
+###--- General aliases ---###
 alias ls='ls --color=auto'
+
+###---Docker alias---###
+alias docker='sudo /usr/bin/docker'
+alias docker-compose='sudo /usr/bin/docker-compose'
+
+###--------------- Anoconda Setup -------------###
 # >>> conda init >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$(CONDA_REPORT_ERRORS=false '/home/deez79/anaconda3/bin/conda'     shell.bash hook 2> /dev/null)"
+__conda_setup="$(CONDA_REPORT_ERRORS=false '$HOME/anaconda3/bin/conda'     shell.bash hook 2> /dev/null)"
 if [ $? -eq 0 ]; then
         \eval "$__conda_setup"
 else
-        if [ -f "/home/deez79/anaconda3/etc/profile.d/conda.sh" ]; then
-                . "/home/deez79/anaconda3/etc/profile.d/conda.sh"
+        if [ -f "$HOME/anaconda3/etc/profile.d/conda.sh" ]; then
+                . "$HOME/anaconda3/etc/profile.d/conda.sh"
                 CONDA_CHANGEPS1=false conda activate base
         else
-                \export PATH="/home/deez79/anaconda3/bin:$PATH"
+                \export PATH="$HOME/anaconda3/bin:$PATH"
         fi
 fi
 unset __conda_setup
