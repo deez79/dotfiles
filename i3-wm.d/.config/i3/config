@@ -247,8 +247,10 @@ bindsym $mod+minus      exec amixer set Master -q 5%-
 ## ----- Screen Lock -----##
 bindsym $mod+Shift+w    exec i3lock -d -c 000000
 
-
-
+## ----- Caps Lock to Ctrl -----##
+#exec --no-startup-id setxkbmap -option 'ctrl:nocaps,shift:both_capslock_cancel'
+exec --no-startup-id setxkbmap -layout us -option 'caps:ctrl'
+#setxkbmap -layout us -option 'caps:ctrl'
 
 
 ###-------------------Dummy Test Bindings--------------------------###
