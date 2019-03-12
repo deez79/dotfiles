@@ -1,0 +1,16 @@
+echo "################################################################################"
+## Install Vundle for vim:
+##       would like to set up way to check and see if Vundle exists already
+echo "Seeing if Vundle is installed"
+if [ -d ~/.vim/bundle/Vundle.vim  ]
+    then 
+        echo "Vundle is installed. No need to reinstall it"
+    else
+        echo "Installing Vundle"
+        git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+        vim +PluginInstall +qall
+fi
+##      }}} <<<End of install and setup vim>>>
+
+echo 
+echo "################################################################################"
