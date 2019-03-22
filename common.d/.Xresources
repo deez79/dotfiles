@@ -40,3 +40,4 @@ URxvt.perl-ext-common: default,matcher
 !! Transparency:
 urxvt*depth:    32
 urxvt*background: [80]#000000
+

@@ -248,9 +248,6 @@ bindsym $mod+minus      exec amixer set Master -q 5%-
 bindsym $mod+Shift+w    exec i3lock -d -c 000000
 
 
-
-
-
 ###-------------------Dummy Test Bindings--------------------------###
 #
 #bindsym $mod+p          exec $term -e ranger
