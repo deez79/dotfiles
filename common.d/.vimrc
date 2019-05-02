@@ -168,6 +168,11 @@ autocmd BufNewFile *.py   0read ~/Skeletons/skeleton.py
 " Make 81st column stand out:
 highlight ColorColumn ctermbg=magenta
 call matchadd('ColorColumn', '\%81v', 100)
+
+" For use with copying and pasting from the system clipboard:
+" vnoremap <C-c> "+y
+vnoremap <C-c> "*y :let @+=@*<CR>
+map <C-p> "+p
  
  "}}}<<<end of General Section>>>
  
