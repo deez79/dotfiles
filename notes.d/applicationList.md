@@ -63,8 +63,11 @@
 * pulseaudio-lirc
 * mplayer
 * pavucontrol
-*
-*
+* cava
+* mplayer
+
+## Arch Specific:
+* yay
 
 ## Uninstalled:
 * arc-gtk-theme

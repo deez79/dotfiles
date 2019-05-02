@@ -26,23 +26,25 @@ This is my first attempt at an arch i3 customization collection.
     $ sudo dnf install i3-gaps
 * Polybar needs to be compiled from soure:
     * make sure you have all dependancies (the devel versions)
+    * DEVEL versions
         * cairo
         * libxcb
-        * python2
-        * xcb-proto
         * xcb-util-image
         * xcb-util-wm
         * clang
-        * gcc
         * xcb-util-cursor
         * xcb-util-xrm
-        * xcb-xkb
         * alsa-lib
-        * libpulse
         * jsoncpp
         * libmpdclient
         * libcurl
+    * As Described
+        * xcb-proto
+        * xcb-xkb
+        * libpulse
         * libnl-genl
+        * gcc
+        * python2
     * download polybar-<version>.tar from https://github.com/jaagr/polybar/releases
     $ tar -xvf polybar-<version>.tar
     $ cd polybar
