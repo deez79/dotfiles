@@ -299,3 +299,7 @@ endfunction
  "}}} <<<end of Options>>>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""<<<EOF>>>
+
+""" additional inculdes """
+
+source ~/.local/local.vimrc
