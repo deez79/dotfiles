@@ -110,7 +110,7 @@
  Plugin 'abra/vim-obsidian'
  Plugin 'michalbachowski/vim-wombat256mod'
  Plugin 'patstockwell/vim-monokai-tasty'
-
+ Plugin 'NLKNguyen/papercolor-theme'
  " Utilisnips Pluggin
  " Track the engine.
 " Plugin 'SirVer/ultisnips'
