@@ -302,6 +302,6 @@ endfunction
 
 """ additional inculdes """
 
-if filereadable("~/.local/local.vimrc")
+if filereadable( $HOME . "/.local/local.vimrc")
     source ~/.local/local.vimrc
 endif
