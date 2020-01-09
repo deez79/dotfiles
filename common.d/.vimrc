@@ -132,6 +132,9 @@
  " python IDE
 Plugin 'python-mode/python-mode' 
 
+" NERDTree file navigation
+Plugin 'preservim/nerdtree'
+
  " All of your Plugins must be added before the following line
  call vundle#end()            " required
  filetype plugin indent on    " required
@@ -173,6 +176,10 @@ call matchadd('ColorColumn', '\%81v', 100)
 " vnoremap <C-c> "+y
 vnoremap <C-c> "*y :let @+=@*<CR>
 map <C-p> "+p
+
+" NERDTree {{{
+map <Leader>n :NERDTreeToggle<CR>
+" }}}
  
  "}}}<<<end of General Section>>>
  
@@ -218,15 +225,7 @@ let g:airline_theme='luna'
 
 "=> VimCasts:{{{
 """""""""Show Invisibles{{{""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Shortcut to rapidly toggle `set list`
- nmap <leader>l :set list!<CR>
-" " Use the same symbols as TextMate for tabstops and EOLs
-" The "if patch" is taken from:
-" http://stackoverflow.com/questions/18321538/vim-error-e474-invalid-argument-listchars-tab-trailhttp://stackoverflow.com/questions/18321538/vim-error-e474-invalid-argument-listchars-tab-trail
-"       to work around the tab and eol characters.
-if has("patch-7.4.710")
- set listchars=tab:▸\ ,eol:¬
-endif
+" Shortcut to rapidly toggle `set list` nmap <leader>l :set list!<CR> " Use the same symbols as TextMate for tabstops and EOLs The "if patch" is taken from: http://stackoverflow.com/questions/18321538/vim-error-e474-invalid-argument-listchars-tab-trailhttp://stackoverflow.com/questions/18321538/vim-error-e474-invalid-argument-listchars-tab-trail to work around the tab and eol characters.  if has("patch-7.4.710") set listchars=tab:▸\ ,eol:¬ endif
 "}}}<<<end show invisibles>>>
 
 """""""""Tabs and Spaces{{{""""""""""""""""""""""""""""""""""""""""""""""""""""""""
