@@ -132,6 +132,9 @@
  " python IDE
 Plugin 'python-mode/python-mode' 
 
+" Dockerfile.vim for dockerfile syntax highlighting
+Plugin 'ekalinin/dockerfile.vim'
+
 " NERDTree file navigation
 Plugin 'preservim/nerdtree'
 
