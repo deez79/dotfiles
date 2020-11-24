@@ -2,8 +2,12 @@
 
 ###--- General aliases ---###
 alias ls='ls --color=auto'
+alias vim='gvim -v'
+
 
 ###---Docker alias---###
 alias docker='sudo /usr/bin/docker'
 alias docker-compose='sudo /usr/bin/docker-compose'
 
+
+[ -f "$HOME/.local/bash/aliasrc" ] && source "$HOME/.local/bash/aliasrc"
