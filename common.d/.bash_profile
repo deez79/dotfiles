@@ -8,12 +8,24 @@
 HISTSIZE= HISTFILESIZE= 
 
 # Standard:
-[[ -f ~/.bashrc ]] && . ~/.bashrc
+#[[ -f ~/.bashrc ]] && . ~/.bashrc
+
+#if [ -f $HOME/.bash_profile ]; then
+#        source $HOME/.bash_profile
+#fi
+
+# Powerline:
+if [ -f `which powerline-daemon` ]; then
+  powerline-daemon -q
+  POWERLINE_BASH_CONTINUATION=1
+  POWERLINE_BASH_SELECT=1
+  . /usr/share/powerline/bash/powerline.sh
+fi
 
 # Set terminal navigation to vim
 set -o vi
 
-export TERMINAL="urxvt"
+# export TERMINAL="urxvt"
 
 ###--------------------- Path -----------------###
 # Path
@@ -49,21 +61,22 @@ alias ls='ls --color=auto'
 ###---Docker alias---###
 alias docker='sudo /usr/bin/docker'
 alias docker-compose='sudo /usr/bin/docker-compose'
+alias vim='gvim -v'
 
 ###--------------- Anoconda Setup -------------###
-# >>> conda init >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$(CONDA_REPORT_ERRORS=false '$HOME/anaconda3/bin/conda'     shell.bash hook 2> /dev/null)"
-if [ $? -eq 0 ]; then
-        \eval "$__conda_setup"
-else
-        if [ -f "$HOME/anaconda3/etc/profile.d/conda.sh" ]; then
-                . "$HOME/anaconda3/etc/profile.d/conda.sh"
-                CONDA_CHANGEPS1=false conda activate base
-        else
-                \export PATH="$HOME/anaconda3/bin:$PATH"
-        fi
-fi
-unset __conda_setup
-# <<< conda init <<<
+## >>> conda init >>>
+## !! Contents within this block are managed by 'conda init' !!
+#__conda_setup="$(CONDA_REPORT_ERRORS=false '$HOME/anaconda3/bin/conda'     shell.bash hook 2> /dev/null)"
+#if [ $? -eq 0 ]; then
+#        \eval "$__conda_setup"
+#else
+#        if [ -f "$HOME/anaconda3/etc/profile.d/conda.sh" ]; then
+#                . "$HOME/anaconda3/etc/profile.d/conda.sh"
+#                CONDA_CHANGEPS1=false conda activate base
+#        else
+#                \export PATH="$HOME/anaconda3/bin:$PATH"
+#        fi
+#fi
+#unset __conda_setup
+## <<< conda init <<<
 
