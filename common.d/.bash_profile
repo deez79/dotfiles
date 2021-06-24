@@ -1,11 +1,12 @@
 #
 # ~/.bash_profile
 #
-#echo "from bash_profile"
+echo "from bash_profile"
 
 ###------------ General ----------------------###
 # Infinite History:
 HISTSIZE= HISTFILESIZE= 
+export HISTFILE=~/.logs/bash_history
 
 # Standard:
 #[[ -f ~/.bashrc ]] && . ~/.bashrc
@@ -16,10 +17,10 @@ HISTSIZE= HISTFILESIZE=
 
 # Powerline:
 if [ -f `which powerline-daemon` ]; then
-  powerline-daemon -q
+git clone https://github.com/ryanoasis/nerd-fonts  powerline-daemon -q
   POWERLINE_BASH_CONTINUATION=1
   POWERLINE_BASH_SELECT=1
-  . /usr/share/powerline/bash/powerline.sh
+  . /usr/share/powerline/integrations/powerline.sh
 fi
 
 # Set terminal navigation to vim
