@@ -1,309 +1,217 @@
  """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
  "
- "       .vimrc Attribution: 
+ "       .vimrc Attribution:
  "
  "       Created by: @deez79
- "       Date created: 05/19/2016
+ "       Date revised: 05/28/2021
  "
  "       Basic installs: "{{{
- "               1. install bundle:
- "                      $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim 
- "               2. set up bundle in .vimrc 
- "                      set nocompatible              " be iMproved, required
- "                      filetype off                  " required
- "
- "                     " set the runtime path to include Vundle and initialize
- "                     set rtp+=~/.vim/bundle/Vundle.vim
- "                     call vundle#begin()
- "                     " alternatively, pass a path where Vundle should install plugins
- "                     "call vundle#begin('~/some/path/here')
- "
- "                     " let Vundle manage Vundle, required
- "                     Plugin 'VundleVim/Vundle.vim'
- "                     " The following are examples of different formats supported.
- "                     " Keep Plugin commands between vundle#begin/end.
- "                     " plugin on GitHub repo
- "                     Plugin 'tpope/vim-fugitive'
- "                     " plugin from http://vim-scripts.org/vim/scripts.html
- "                     Plugin 'L9'
- "                     " Git plugin not hosted on GitHub
- "                     Plugin 'git://git.wincent.com/command-t.git'
- "                     " git repos on your local machine (i.e. when working on your own plugin)
- "                     Plugin 'file:///home/gmarik/path/to/plugin'
- "                     " The sparkup vim script is in a subdirectory of this repo called vim.
- "                     " Pass the path to set the runtimepath properly.
- "                     Plugin 'rstacruz/sparkup', {'rtp':'vim/'}
- "                     " Install L9 and avoid a Naming conflict if you've already installed a
- "                     " different version somewhere else.
- "                     Plugin 'ascenator/L9', {'name':'newL9'}
- "
- "                     " All of your Plugins must be added before the following line
- "                     call vundle#end()            "required
- "                     filetype plugin indent on    "required
- "                     " To ignore plugin indent changes, instead use:
- "                     "filetype plugin on
- "                     "
- "                     " Brief help
- "                     " :PluginList       - lists configured plugins
- "                     " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
- "                     " :PluginSearch foo - searches for foo; append `!` to refresh local cache
- "                     " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
- "                     "
- "                     " see :h vundle for more details or wiki for FAQ
- "                     " Put your non-Plugin stuff after this line
- "
- "
  "}}}<<<end of Basic install>>>
  "
  "
  "
  """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
- 
- 
- "=> Vundle Section:{{{
 
- set nocompatible              " be iMproved, required
- filetype off                  " required
- 
- " set the runtime path to include Vundle and initialize
- set rtp+=~/.vim/bundle/Vundle.vim
- call vundle#begin()
- " alternatively, pass a path where Vundle should install plugins
- "call vundle#begin('~/some/path/here')
- 
- " let Vundle manage Vundle, required
- Plugin 'VundleVim/Vundle.vim'
- 
- " Basics
- Plugin 'tpope/vim-sensible'
- 
- " Fuzzy Find
- Plugin 'kien/ctrlp.vim'
- 
- " Fancy Bar on bottom 
- Plugin 'bling/vim-airline'
- " add cool themes to airline:
- Plugin 'vim-airline/vim-airline-themes'
- 
- " Commenting
- Plugin 'tomtom/tcomment_vim'
- 
- " Emmet for vim  !!!  
- Plugin 'mattn/emmet-vim'
- 
- " Minimap like the one in sublimetext
- "Plugin 'severin-lemaignan/vim-minimap'
+ "=> General Settings:{{{
+ syntax on
 
- " Markdown Highlightingr 
- Plugin 'godlygeek/tabular'
- Plugin 'plasticboy/vim-markdown'
+ set path+=**
 
- " Auto Pairing for brackets, paren, and quotes
- Plugin 'jiangmiao/auto-pairs'
+ " Nice menu when typing `:find *.py`
+ set wildmode=longest,list,full
+ set wildmenu
+ " Ignore files
+ set wildignore+=*.pyc
+ set wildignore+=*_build/*
+ set wildignore+=**/coverage/*
+ set wildignore+=**/node_modules/*
+ set wildignore+=**/android/*
+ set wildignore+=**/ios/*
+ set wildignore+=**/.git/*
 
- " Color
- Plugin 'sjl/badwolf'
- Plugin 'altercation/vim-colors-solarized'
- Plugin 'tomasr/molokai'
- Plugin 'zaiste/Atom'
- Plugin 'chriskempson/base16-vim'
- Plugin 'abra/vim-obsidian'
- Plugin 'michalbachowski/vim-wombat256mod'
- Plugin 'patstockwell/vim-monokai-tasty'
- Plugin 'NLKNguyen/papercolor-theme'
- " Utilisnips Pluggin
- " Track the engine.
-" Plugin 'SirVer/ultisnips'
- " Snippets are separated from the engine. Add this if you want them:
- " Plugin 'honza/vim-snippets'
+ set tabstop=4 softtabstop=4
+ set shiftwidth=4
+ set expandtab
+ set smartindent
 
- " Verticle Indent Lines to show nesting:
- Plugin 'Yggdroot/indentLine'
+ set noerrorbells
+ set exrc
+ set guicursor=
+ set hidden
+ set wrap
 
- " Live Preview of PDF
- Plugin 'xuhdev/vim-latex-live-preview'
-
- " post install (yarn install | npm install)
- Plugin 'prettier/vim-prettier'
-
- " syntax highlighting for i3-gaps 
- Plugin 'PotatoesMaster/i3-vim-syntax'
- 
- " python IDE
-Plugin 'python-mode/python-mode' 
-
-" Dockerfile.vim for dockerfile syntax highlighting
-Plugin 'ekalinin/dockerfile.vim'
-
-" NERDTree file navigation
-Plugin 'preservim/nerdtree'
-
- " All of your Plugins must be added before the following line
- call vundle#end()            " required
- filetype plugin indent on    " required
- "}}}<<<end of Vundle Section>>>
- 
- "=> General Section:{{{
- 
- " activate numbering
  set number
  set relativenumber
- 
- "set up templates for filetypes
-autocmd BufNewFile *.md   0read ~/Skeletons/skeleton.md
-autocmd BufNewFile *.sh   0read ~/Skeletons/skeleton.sh
-autocmd BufNewFile *.ino  0read ~/Skeletons/skeleton.ino
-autocmd BufNewFile *.py   0read ~/Skeletons/skeleton.py
-"autocmd BufNewFile *.c    0read ~/Skeletons/skeleton.c
-"autocmd BufNewFile *.h    0read ~/Skeletons/skeleton.h
-"autocmd BufNewFile *.java 0read ~/Skeletons/skeleton.java
 
-" add highlighting
- set hlsearch
-" Press Space to turn off highlighting and clear any message already
-" displayed.
- nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
-" Press F4 to toggle highlighting on/off, and show current value.
- noremap <F4> :set hlsearch! hlsearch?<CR>
+ set incsearch
+ "set hlsearch
+ "set nohlsearch
+ "set smartcase
+ "set ignorecase
 
-" automatically reload vimrc when it's saved
- "      taken from: http://www.vimbits.com/bits/128
- "      seems to bogdown vim.  Probably remove it.
-"autocmd BufWritePost .vimrc so ~/.vimrc
-
-" Make 81st column stand out:
-highlight ColorColumn ctermbg=magenta
-call matchadd('ColorColumn', '\%81v', 100)
-
-" For use with copying and pasting from the system clipboard:
-" vnoremap <C-c> "+y
-vnoremap <C-c> "*y :let @+=@*<CR>
-map <C-p> "+p
-
-" NERDTree {{{
-map <Leader>n :NERDTreeToggle<CR>
-" }}}
- 
- "}}}<<<end of General Section>>>
- 
-"=> Set Fold Method:{{{
  set foldmethod=marker
- 
- " Fold Method types:
- " 
- "       maker
- "       indent
- "       manual
- "       diff
- "       expr
- "       syntax
- "
- " Fold Commands:
- "zM => fold all
- "zR => unfold all
- "za => fold
- " Default marker is: {{{ and }}}
- "       How to change markers
- "       set foldmarker=start, end
- "       i.e
- "               set foldmaker=/*,*/
- " }}}<<<end of fold method>>>
 
-"> Color Section: {{{
-set t_Co=256
-let g:solarized_termcolors=256
-let base16colorspace=256  " Access colors present in 256 colorspace
+ " Make 81st column stand out:
+ highlight ColorColumn ctermbg=magenta
+ call matchadd('ColorColumn', '\%81v', 100)
+ "set colorcolumn=80
 
-" Colors set to solarized (use if accessing from c9)
-"set background=dark
-"colorscheme solarized
-"colorscheme desert
-colorscheme atom
-"colorscheme molokai
+ set signcolumn=yes
 
-" color theme for airline:
-let g:airline_theme='luna'
+ set scrolloff=8
 
-"}}}<<<end of color section>>>
+ set noswapfile
+ set nobackup
+ set undodir=~/.vim/undodir
+ set undofile
 
-"=> VimCasts:{{{
-"""""""""Show Invisibles{{{""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Shortcut to rapidly toggle `set list` nmap <leader>l :set list!<CR> " Use the same symbols as TextMate for tabstops and EOLs The "if patch" is taken from: http://stackoverflow.com/questions/18321538/vim-error-e474-invalid-argument-listchars-tab-trailhttp://stackoverflow.com/questions/18321538/vim-error-e474-invalid-argument-listchars-tab-trail to work around the tab and eol characters.  if has("patch-7.4.710") set listchars=tab:▸\ ,eol:¬ endif
-"}}}<<<end show invisibles>>>
+ "}}} <end General Settings>
 
-"""""""""Tabs and Spaces{{{""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" 4 settings:
-"tabstop: specifies the width of a tab character
-"expandtab: when eneabled causes spaces to be used instead of tab characters
-"softtabstop: when enabled fine tunes the abmount of whitespace to be inserted
-"shiftwidth: determines the amount of whitespace to insert or remove using the
-"	indentation commands in normal mode
-"
-" If you want to alway characters then tabstop == stoftab
-" If you prefer to work with spaces then softtabstop == shiftwidth
+ "=> Plug Section:{{{
+ call plug#begin('~/.vim/plugged')
 
-"set ts=8 sts=0 sw=8 noexpandtab " default settings
-"set ts=8 sts=0 sw=8 expandtab
-"set ts=8 sts=8 sw=8 expandtab "prefered settings for now
-set ts=4 sts=4 sw=4 expandtab "Default.  Used for Python Code!
-"set ts=8 sts=4 sw=4 expandtab
-"set ts=8 sts=4 sw=4 noexpandtab
-"set ts=4 sts=4 sw=4 noexpandtab
+ " Basics
+ Plug 'tpope/vim-sensible'
+ Plug 'tpope/vim-fugitive'
 
-" Set tabstop, softtabstop and shiftwidth to the same value
-command! -nargs=* Stab call Stab()
-function! Stab()
-	let l:tabstop = 1 * input('set tabstop = softtabstop = shiftwidth = ')
-	if l:tabstop > 0
-		let &l:sts = l:tabstop
-		let &l:ts = l:tabstop
-		let &l:sw = l:tabstop
-	endif
-	call SummarizeTabs()
-endfunction
+ " Color
+ Plug 'altercation/vim-colors-solarized'
+ Plug 'tomasr/molokai'
+ Plug 'zaiste/Atom'
+ Plug 'NLKNguyen/papercolor-theme'
+ Plug 'gruvbox-community/gruvbox'
+ " Fancy Bar on bottom
+ Plug 'bling/vim-airline'
+ " add cool themes to airline:
+ Plug 'vim-airline/vim-airline-themes'
 
-function! SummarizeTabs()
-	try
-		echohl ModeMsg
-		echon 'tabstop='.&l:ts
-		echon ' shiftwidth='.&l:sw
-		echon ' softtabstop='.&l:sts
-		if &l:et
-			echon ' expandtab'
-		else
-			echon 'noexpandtab'
-		endif
-	finally
-		echohl None
-	endtry
-endfunction
-"}}}<<<end tabs and spaces>>>
+ " man pages
+ Plug 'vim-utils/vim-man'
 
-"""""""""Utilisnips:{{{""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" http://vimcasts.org/episodes/meet-ultisnips/
-" Trigger configuration. Do not use <tab> if you use
-" https://github.com/Valloric/YouCompleteMe.
-" let g:UltiSnipsExpandTrigger="<tab>"
-" let g:UltiSnipsJumpForwardTrigger="<c-b>"
-" let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-"
-" If you want :UltiSnipsEdit to split your window.
-" let g:UltiSnipsEditSplit="vertical"
-" }}} <<<end of Utilisnips>>>
- 
-"}}} <<end of VimCasts>>>
+ " Fuzzy Find
+ Plug 'kien/ctrlp.vim'
 
-" => Options {{{
+ " Fast Greps
+ Plug 'jremmen/vim-ripgrep'
 
-" set viewer for pdf preview:
- "let g:livepreview_previewer = 'Document_Viewer'
+ " Commenting
+ Plug 'tomtom/tcomment_vim'
 
- "}}} <<<end of Options>>>
+ " Emmet for vim  !!!
+ Plug 'mattn/emmet-vim'
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""<<<EOF>>>
+ " Markdown Highlightingr
+ Plug 'godlygeek/tabular'
+ Plug 'plasticboy/vim-markdown'
 
-""" additional inculdes """
+ " Auto Pairing for brackets, paren, and quotes
+ Plug 'jiangmiao/auto-pairs'
 
-if filereadable( $HOME . "/.local/local.vimrc")
+ " Verticle Indent Lines to show nesting:
+ Plug 'Yggdroot/indentLine'
+
+ " Live Preview of PDF
+ Plug 'xuhdev/vim-latex-live-preview'
+
+ " post install (yarn install | npm install)
+ Plug 'prettier/vim-prettier'
+
+ " syntax highlighting for i3-gaps
+ Plug 'PotatoesMaster/i3-vim-syntax'
+
+ " python IDE
+ Plug 'python-mode/python-mode'
+
+ " Dockerfile.vim for dockerfile syntax highlighting
+ Plug 'ekalinin/dockerfile.vim'
+
+ " AutoComplete for a lot of languages
+ Plug 'ycm-core/YouCompleteMe'
+ " Undo Tree
+ Plug 'mbbill/undotree'
+
+ " Black uncompromising python code formatter
+ Plug 'ambv/black'
+
+ call plug#end()
+ "}}}<<<end of Plug Section>>>
+
+ "=> Color Section: {{{
+ set termguicolors
+ let g:gruvbox_italic=1
+
+ "colorscheme atom
+ colorscheme gruvbox
+ "colorscheme PaperColor
+ set background=dark
+ highlight Normal guibg=NONE ctermbg=NONE
+
+
+ " color theme for airline:
+ let g:airline_theme='luna'
+ "}}}<<<end of color section>>>
+
+ "=> Remap Section:{{{
+ " Set <LEADER> Key
+ let mapleader = " "
+
+ " For use with copying and pasting from the system clipboard:
+ " vnoremap <C-c> "+y
+ vnoremap <C-c> "*y :let @+=@*<CR>
+ map <C-p> "+p
+
+ let g:netrw_browse_split=2
+ let g:netrw_banner = 0
+ let g:netrw_winsize = 25
+
+ nnoremap <leader>h :wincmd h<CR>
+ nnoremap <leader>j :wincmd j<CR>
+ nnoremap <leader>k :wincmd k<CR>
+ nnoremap <leader>l :wincmd l<CR>
+
+ nnoremap <leader>u :UndotreeToggle<CR>
+
+ nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
+ nnoremap <leader>ps :Rg<space>
+
+ nnoremap <silent> <leader>+ :vertical resize +5<CR>
+ nnoremap <silent> <leader>- :vertical resize -5<CR>
+
+ "toggle highlightSearch with double leader tap
+ let hlstate=0
+ nnoremap <leader> <leader> :if (hlstate == 0) \| nohlsearch \| else \| set hlsearch \| endif \| let hlstate=1-hlstate<cr>
+
+"YouCompleteMe
+nnoremap <silent> <leader>gd :YcmCompleter GoTo<CR>
+nnoremap <silent> <leader>gf :YcmCompleter FixIt<CR>
+"}}} <End of Remap Section
+
+ "=> Autocmd Section: {{{
+    "=> Template Section:{{{
+ "set up templates for filetypes
+ autocmd BufNewFile *.md   0read ~/Skeletons/skeleton.md
+ autocmd BufNewFile *.sh   0read ~/Skeletons/skeleton.sh
+ autocmd BufNewFile *.ino  0read ~/Skeletons/skeleton.ino
+ autocmd BufNewFile *.py   0read ~/Skeletons/skeleton.py
+ autocmd BufNewFile *.py   0read ~/Skeletons/skeleton.py
+ "autocmd BufNewFile *.h    0read ~/Skeletons/skeleton.h
+ "autocmd BufNewFile *.java 0read ~/Skeletons/skeleton.java
+    "}}} <End of Template Section>
+
+ fun! TrimWhitespace()
+     let l:save = winsaveview()
+     keeppatterns %s/\s\+$//e
+     call winrestview(l:save)
+ endfun
+
+ augroup PERSONAL_GROUP
+     autocmd!
+     autocmd BufwritePre * :call TrimWhitespace()
+ augroup END
+ "}}} <End Autocmd Section>
+
+ """ additional inculdes """
+
+ if filereadable( $HOME . "/.local/local.vimrc")
     source ~/.local/local.vimrc
-endif
+ endif
