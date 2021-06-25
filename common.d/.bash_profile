@@ -5,7 +5,7 @@ echo "from bash_profile"
 
 ###------------ General ----------------------###
 # Infinite History:
-HISTSIZE= HISTFILESIZE= 
+HISTSIZE= HISTFILESIZE=
 export HISTFILE=~/.logs/bash_history
 
 # Standard:
@@ -16,12 +16,12 @@ export HISTFILE=~/.logs/bash_history
 #fi
 
 # Powerline:
-if [ -f `which powerline-daemon` ]; then
-git clone https://github.com/ryanoasis/nerd-fonts  powerline-daemon -q
-  POWERLINE_BASH_CONTINUATION=1
-  POWERLINE_BASH_SELECT=1
-  . /usr/share/powerline/integrations/powerline.sh
-fi
+#if [ -f `which powerline-daemon` ]; then
+#git clone https://github.com/ryanoasis/nerd-fonts  powerline-daemon -q
+#  POWERLINE_BASH_CONTINUATION=1
+#  POWERLINE_BASH_SELECT=1
+#  . /usr/share/powerline/integrations/powerline.sh
+#fi
 
 # Set terminal navigation to vim
 set -o vi
@@ -30,7 +30,7 @@ set -o vi
 
 ###--------------------- Path -----------------###
 # Path
-PATH=$PATH:~/bin 
+PATH=$PATH:~/bin
 export PATH
 
 ###------------------- Prompt -----------------###
