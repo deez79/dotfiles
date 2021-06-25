@@ -1,0 +1,17 @@
+echo "################################################################################"
+## Install Plug for vim:
+##       would like to set up way to check and see if Plug exists already
+echo "Seeing if Plug is installed"
+if [ -d ~/.vim/autoload/plug.vim  ]
+    then
+        echo "Plug is installed. No need to reinstall it"
+    else
+        echo "Installing Plug"
+        curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+            https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+        vim +PluginInstall +qall
+fi
+##      }}} <<<End of install and setup vim>>>
+
+echo
+echo "################################################################################"
