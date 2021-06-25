@@ -9,7 +9,7 @@ if [ -d ~/.vim/autoload/plug.vim  ]
         echo "Installing Plug"
         curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
             https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-        vim +PluginInstall +qall
+        vim +PlugInstall +qall
 fi
 ##      }}} <<<End of install and setup vim>>>
 
