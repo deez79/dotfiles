@@ -148,7 +148,9 @@
 
 
  " color theme for airline:
- let g:airline_theme='luna'
+ "let g:airline_theme='luna'
+ "let g:airline_theme='jellybeans'
+ let g:airline_theme='papercolor'
  "}}}<<<end of color section>>>
 
  "=> Remap Section:{{{
