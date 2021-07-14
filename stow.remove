@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
+
 pushd $DOTFILES
 for folder in $(echo common.d)
 do
-    stow -v -D -t ~/ $folder
-    stow -v -t ~/ $folder
-
+    echo "Removing $folder"
+    stow -D -t ~/ $folder
 done
 popd
