@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+pushd $DOTFILES
+for folder in $(echo common.d)
+do
+    stow -v -D -t ~/ $folder
+    stow -v -t ~/ $folder
+
+done
+popd
