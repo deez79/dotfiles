@@ -64,6 +64,8 @@ alias docker='sudo /usr/bin/docker'
 alias docker-compose='sudo /usr/bin/docker-compose'
 alias vim='gvim -v'
 
+source ~/.local/config/aliases
+
 ###--------------- Anoconda Setup -------------###
 ## >>> conda init >>>
 ## !! Contents within this block are managed by 'conda init' !!
