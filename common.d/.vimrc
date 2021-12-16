@@ -156,7 +156,7 @@
 
  "=> Remap Section:{{{
  " Set <LEADER> Key
- let mapleader = " "
+ let mapleader = "\<space>"
 
  " For use with copying and pasting from the system clipboard:
  " vnoremap <C-c> "+y
@@ -187,6 +187,10 @@
 "YouCompleteMe
 nnoremap <silent> <leader>gd :YcmCompleter GoTo<CR>
 nnoremap <silent> <leader>gf :YcmCompleter FixIt<CR>
+
+
+nmap <leader>ve :edit ~/.vimrc<cr>
+nmap <leader>vs :source ~/.vimrc<cr>
 "}}} <End of Remap Section
 
  "=> Autocmd Section: {{{
