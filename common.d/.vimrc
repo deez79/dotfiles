@@ -103,6 +103,7 @@
  " Markdown Highlightingr
  Plug 'godlygeek/tabular'
  Plug 'plasticboy/vim-markdown'
+ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
  " Auto Pairing for brackets, paren, and quotes
  Plug 'jiangmiao/auto-pairs'
@@ -191,6 +192,8 @@ nnoremap <silent> <leader>gf :YcmCompleter FixIt<CR>
 
 nmap <leader>ve :edit ~/.vimrc<cr>
 nmap <leader>vs :source ~/.vimrc<cr>
+
+nmap <leader>P :MarkdownPreview<cr>
 "}}} <End of Remap Section
 
  "=> Autocmd Section: {{{
