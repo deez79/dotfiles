@@ -92,7 +92,7 @@
  Plug 'kien/ctrlp.vim'
 
  " Fast Greps
- Plug 'jremmen/vim-ripgrep'
+" Plug 'jremmen/vim-ripgrep'
 
  " Commenting
  Plug 'tomtom/tcomment_vim'
