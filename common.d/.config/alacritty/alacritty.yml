@@ -389,3 +389,7 @@ key_bindings:
     #- { key: Subtract, mods: Control,       action: DecreaseFontSize       }
   - { key: Key0,     mods: Control,       action: ResetFontSize          }
 
+
+import:
+  # color theme (gruvbox_dark) if it exists
+  - ./gruvbox_dark.yaml
