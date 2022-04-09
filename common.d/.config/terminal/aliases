@@ -1,0 +1,18 @@
+# Aliases to be sourced by shell rc's
+
+
+
+###--- General aliases ---###
+alias ls='ls --color=auto'
+
+###---Docker alias---###
+alias docker='sudo /usr/bin/docker'
+alias docker-compose='sudo /usr/bin/docker-compose'
+alias vim='gvim -v'
+
+###--- Youtube Downloader---###
+#alias youtube-dl-audio='youtube-dl --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s"'
+alias youtube-dl='yt-dlp'
+
+alias ytdl-a='yt-dlp --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s"'
+
