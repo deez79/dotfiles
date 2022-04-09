@@ -5,17 +5,22 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+###--- General Settings---###
+source ~/.config/terminal/general.rc
+
 #export TERM=screen-256color
-export TERM=xterm-256color
+#export TERM=xterm-256color
 
 #export Editor as vim
-export EDITOR=vim
+#export EDITOR=vim
 
 # Lines configured by zsh-newuser-install
 #HISTFILE=~/.cache/history/histfile
 #HISTFILE=/home/deez79/.cache/history/histfile
-HISTSIZE=10000
-HISTSAVE=10000
+#HISTSIZE=10000
+#HISTSAVE=10000
+
+###--- ZSH Exclusive ---###
 unsetopt beep
 bindkey -v
 
@@ -28,6 +33,8 @@ compinit
 
 ###--- General Aliases ---###
 alias ls='ls --color=auto'
+#[[ ! -f ~/.config/terminal/aliases.rc || source ~/.config/terminal/aliases.rc]]
+source ~/.config/terminal/aliases.rc
 
 source ~/.local/powerlevel10k/powerlevel10k.zsh-theme
 

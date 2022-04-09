@@ -4,9 +4,11 @@
 echo "from bash_profile"
 
 ###------------ General ----------------------###
+source ~/.config/terminal/general.rc
+
 # Infinite History:
-HISTSIZE= HISTFILESIZE=
-export HISTFILE=~/.logs/bash_history
+#HISTSIZE= HISTFILESIZE=
+#export HISTFILE=~/.logs/bash_history
 
 # Standard:
 #[[ -f ~/.bashrc ]] && . ~/.bashrc
@@ -24,14 +26,14 @@ export HISTFILE=~/.logs/bash_history
 #fi
 
 # Set terminal navigation to vim
-set -o vi
+#set -o vi
 
 # export TERMINAL="urxvt"
 
 ###--------------------- Path -----------------###
 # Path
-PATH=$PATH:~/bin
-export PATH
+#PATH=$PATH:~/bin
+#export PATH
 
 ###------------------- Prompt -----------------###
 # Customize Prompt:
@@ -57,13 +59,14 @@ export PS1;
 ###----------------- Aliases ------------------###
 
 ###--- General aliases ---###
-alias ls='ls --color=auto'
+#alias ls='ls --color=auto'
 
 ###---Docker alias---###
-alias docker='sudo /usr/bin/docker'
-alias docker-compose='sudo /usr/bin/docker-compose'
-alias vim='gvim -v'
+#alias docker='sudo /usr/bin/docker'
+#alias docker-compose='sudo /usr/bin/docker-compose'
+#alias vim='gvim -v'
 
+source ~/.config/terminal/aliases.rc
 source ~/.local/config/aliases
 
 ###--------------- Anoconda Setup -------------###

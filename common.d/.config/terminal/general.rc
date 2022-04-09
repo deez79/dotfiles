@@ -19,6 +19,10 @@ export HISTFILE=~/.logs/terminal_history
 # Set terminal navigation to vim
 set -o vi
 
-unsetopt beep
-bindkey -v
+#unsetopt beep
+#bindkey -v
 
+###--- Path ---###
+# Path
+PATH=$PATH:~/bin
+export PATH

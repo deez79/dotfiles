@@ -2,7 +2,7 @@
 
 !!+--------------------------------------------------------+
 !!
-!! .Xresources file 
+!! .Xresources file
 !! Created by: deez79
 !! based on: https://gist.github.com/liangzan/1643690
 !! to load:        $ xrbd -I$HOME ~/.Xresources
@@ -24,11 +24,11 @@ URxvt.matcher.button: 1
 !! Fonts
 ! https://github.com/ryanoasis/nerd-fonts
 !
-!URxvt*font:     xft: UbuntuMono Nerd Font:size=13, 
-!                xft:inconsolata:size=10:antialias=true,
-!                xft: Monospace:style=Medium:antialias=false
+URxvt*font:     xft: UbuntuMono Nerd Font:size=13,
+                xft:inconsolata:size=10:antialias=true,
+                xft: Monospace:style=Medium:antialias=false
 
-URxvt*font:     xft:inconsolata:size=10:antialias=true
+!URxvt*font:     xft:inconsolata:size=10:antialias=true
 
 !! Extentions
 URxvt.perl-ext-common: default,matcher
