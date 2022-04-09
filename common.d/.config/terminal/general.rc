@@ -1,0 +1,24 @@
+###---General File---###
+
+#export TERM=screen-256color
+export TERM=xterm-256color
+
+#export Editor as vim
+export EDITOR=vim
+
+# Lines configured by zsh-newuser-install
+#HISTFILE=~/.cache/history/histfile
+#HISTFILE=/home/deez79/.cache/history/histfile
+#HISTSIZE=10000
+#HISTSAVE=10000
+
+# Infinite History:
+HISTSIZE= HISTFILESIZE=
+export HISTFILE=~/.logs/terminal_history
+
+# Set terminal navigation to vim
+set -o vi
+
+unsetopt beep
+bindkey -v
+
