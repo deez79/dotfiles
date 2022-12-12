@@ -186,14 +186,19 @@
  nnoremap <leader> <leader> :if (hlstate == 0) \| nohlsearch \| else \| set hlsearch \| endif \| let hlstate=1-hlstate<cr>
 
 "YouCompleteMe
-nnoremap <silent> <leader>gd :YcmCompleter GoTo<CR>
-nnoremap <silent> <leader>gf :YcmCompleter FixIt<CR>
+ nnoremap <silent> <leader>gd :YcmCompleter GoTo<CR>
+ nnoremap <silent> <leader>gf :YcmCompleter FixIt<CR>
 
 
-nmap <leader>ve :edit ~/.vimrc<cr>
-nmap <leader>vs :source ~/.vimrc<cr>
+ nmap <leader>ve :edit ~/.vimrc<cr>
+ nmap <leader>vs :source ~/.vimrc<cr>
 
-nmap <leader>P :MarkdownPreview<cr>
+ nmap <leader>P :MarkdownPreview<cr>
+
+" half page jumps with centering of cursor:
+ nnoremap <C-d> <C-d>zz
+ nnoremap <C-u> <C-u>zz
+
 "}}} <End of Remap Section
 
  "=> Autocmd Section: {{{
