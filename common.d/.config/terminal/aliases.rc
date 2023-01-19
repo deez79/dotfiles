@@ -15,5 +15,5 @@ alias vim='gvim -v'
 #alias youtube-dl-audio='youtube-dl --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s"'
 alias youtube-dl='yt-dlp'
 
-alias ytdl-a='yt-dlp --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s"'
+alias ytdl-a='yt-dlp --yes-playlist --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s"'
 

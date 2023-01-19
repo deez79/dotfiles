@@ -17,8 +17,9 @@ source ~/.config/terminal/general.rc
 # Lines configured by zsh-newuser-install
 #HISTFILE=~/.cache/history/histfile
 #HISTFILE=/home/deez79/.cache/history/histfile
-#HISTSIZE=10000
-#HISTSAVE=10000
+HISTFILE=~/.logs/zsh_history
+HISTSIZE=10000
+HISTSAVE=10000
 
 ###--- ZSH Exclusive ---###
 unsetopt beep

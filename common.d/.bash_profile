@@ -1,23 +1,16 @@
 #
 # ~/.bash_profile
 #
+###-------------Bash Exclusive----------------###
 echo "from bash_profile"
 
-###------------ General ----------------------###
-source ~/.config/terminal/general.rc
-
-# Infinite History:
-#HISTSIZE= HISTFILESIZE=
-#export HISTFILE=~/.logs/bash_history
-
-# Standard:
 #[[ -f ~/.bashrc ]] && . ~/.bashrc
 
 #if [ -f $HOME/.bash_profile ]; then
 #        source $HOME/.bash_profile
 #fi
 
-# Powerline:
+## Powerline: (Not sure if this works in bash or in zsh)
 #if [ -f `which powerline-daemon` ]; then
 #git clone https://github.com/ryanoasis/nerd-fonts  powerline-daemon -q
 #  POWERLINE_BASH_CONTINUATION=1
@@ -25,17 +18,19 @@ source ~/.config/terminal/general.rc
 #  . /usr/share/powerline/integrations/powerline.sh
 #fi
 
-# Set terminal navigation to vim
-#set -o vi
+###------------ General ----------------------###
+#{{{ => General
 
-# export TERMINAL="urxvt"
+# Shared Genearl Configs
+source ~/.config/terminal/general.rc
 
-###--------------------- Path -----------------###
-# Path
-#PATH=$PATH:~/bin
-#export PATH
+
+
+#}}} end General
 
 ###------------------- Prompt -----------------###
+#{{{ => Prompt
+
 # Customize Prompt:
 ## Color Section:
 green=$(tput setaf 10);
@@ -56,20 +51,22 @@ PS1+="\n";                              # new line
 PS1+="\[${white}\]$ \[${reset}\]";      # reset prompt
 export PS1;
 
+#}}} end Prompt
+
 ###----------------- Aliases ------------------###
+#{{{ => Aliases
 
 ###--- General aliases ---###
-#alias ls='ls --color=auto'
-
-###---Docker alias---###
-#alias docker='sudo /usr/bin/docker'
-#alias docker-compose='sudo /usr/bin/docker-compose'
-#alias vim='gvim -v'
-
+# Shared Aliases
 source ~/.config/terminal/aliases.rc
+# Local Aliases
 source ~/.local/config/aliases
 
+#}}} end Aliases
+
 ###--------------- Anoconda Setup -------------###
+#{{{ => Anaconda Setup
+
 ## >>> conda init >>>
 ## !! Contents within this block are managed by 'conda init' !!
 #__conda_setup="$(CONDA_REPORT_ERRORS=false '$HOME/anaconda3/bin/conda'     shell.bash hook 2> /dev/null)"
@@ -85,4 +82,6 @@ source ~/.local/config/aliases
 #fi
 #unset __conda_setup
 ## <<< conda init <<<
+
+#}}} end Anaconda Setup
 
