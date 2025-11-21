@@ -18,15 +18,6 @@ echo "from bash_profile"
 #  . /usr/share/powerline/integrations/powerline.sh
 #fi
 
-###------------ General ----------------------###
-#{{{ => General
-
-# Shared Genearl Configs
-source ~/.config/terminal/general.rc
-
-
-
-#}}} end General
 
 ###------------------- Prompt -----------------###
 #{{{ => Prompt
@@ -58,11 +49,28 @@ export PS1;
 
 ###--- General aliases ---###
 # Shared Aliases
-source ~/.config/terminal/aliases.rc
+if [ -f ~/.config/terminal/aliases.rc ]; then
+    source ~/.config/terminal/aliases.rc
+fi
 # Local Aliases
-source ~/.local/config/aliases
+if [ -f ~/.local/config/aliases ]; then
+    source ~/.local/config/aliases
+fi
 
 #}}} end Aliases
+if [ -f ~/.local/config/chatgpt.rc ]; then
+    source ~/.local/config/chatgpt.rc
+fi
+
+###------------ General ----------------------###
+#{{{ => General
+
+# Shared Genearl Configs
+source ~/.config/terminal/general.rc
+
+
+
+#}}} end General
 
 ###--------------- Anoconda Setup -------------###
 #{{{ => Anaconda Setup
