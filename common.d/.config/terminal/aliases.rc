@@ -1,5 +1,8 @@
 # Aliases to be sourced by shell rc's
-echo "Loaded Aliases From Terminal/Aliases"
+# Only run in bash
+if [[ -n "$BASH_VERSION" ]]; then
+    echo "Loaded Aliases From Terminal/Aliases"
+fi
 
 
 ###--- General aliases ---###
