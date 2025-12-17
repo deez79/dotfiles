@@ -1,1 +1,1 @@
-mount //192.168.1.155/Plex /mnt/Plex -o username=deez79,vers=1.0
+mount //192.168.7.155/Plex /mnt/Plex -o username=deez79,vers=1.0
