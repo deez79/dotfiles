@@ -65,9 +65,15 @@ fi
 ###------------ General ----------------------###
 #{{{ => General
 
-# Shared Genearl Configs
-source ~/.config/terminal/general.rc
+# Shared General Configs
+if [ -f ~/.config/terminal/general.rc ]; then
+    source ~/.config/terminal/general.rc
+fi
 
+# Local general terminal setup
+if [ -f ~/.local/config/terminal_local ]; then
+    source ~/.local/config/terminal_local
+fi
 
 
 #}}} end General

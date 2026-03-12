@@ -39,10 +39,11 @@ luac.out
 *.x86_64
 *.hex
 
-## nvim Folders 
+## nvim Folders
 common.d/.config/nvim/.git
 common.d/.config/nvim/nvim
 common.d/.config/nvim/plugin
 
-
+# Pulse Folders
+common.d/.config/pulse
 
