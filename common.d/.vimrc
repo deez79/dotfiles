@@ -108,7 +108,7 @@
  Plug 'Yggdroot/indentLine'
 
  " Live Preview of PDF
- Plug 'xuhdev/vim-latex-live-preview'
+" Plug 'xuhdev/vim-latex-live-preview'
 
  " post install (yarn install | npm install)
  Plug 'prettier/vim-prettier'
