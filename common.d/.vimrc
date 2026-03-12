@@ -82,7 +82,7 @@
  Plug 'vim-airline/vim-airline-themes'
 
  " man pages
- Plug 'vim-utils/vim-man'
+ "Plug 'vim-utils/vim-man'
 
  " Fuzzy Find
  Plug 'kien/ctrlp.vim'
